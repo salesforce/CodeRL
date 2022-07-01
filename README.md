@@ -19,7 +19,7 @@ TBA
 -->
 
 
-##Abstract##
+###Abstract
 Program synthesis or code generation aims to generate a program that satisfies a problem specification. Recent approaches using large-scale pretrained language models (LMs) have shown promising results, yet they have some critical limitations. In particular, they often follow a standard supervised fine-tuning procedure to train a
 code generation model from natural language problem descriptions and ground-truth programs only. Such a paradigm largely ignores some important but potentially useful signals in the problem specification such as unit tests, 
 which thus results in poor performance when solving complex unseen coding tasks.  To address the limitations, we propose **CodeRL**, a new framework for program synthesis tasks through pretrained LMs and deep reinforcement learning (RL). Specifically, during training, we treat the code-generating LM as an actor network, and introduce a critic network that is trained to predict the functional correctness of generated programs and provide dense feedback signals to the actor. During inference, we introduce a new generation procedure with a critical sampling strategy that allows a model to automatically regenerate programs based on feedback from example unit tests and critic scores. For the model backbones, we extended the encoder-decoder architecture of CodeT5 with enhanced learning objectives, larger model sizes, and better pretraining data. Our method not only achieves new SOTA results on the challenging APPS benchmark, but also shows strong zero-shot transfer capability with new SOTA results on the simpler MBPP benchmark. 
@@ -32,7 +32,7 @@ which thus results in poor performance when solving complex unseen coding tasks.
 </p>
 
 
-## Model Architecture
+### Model Architecture
 
 <p align="center">
 <img src="images/coderl_training.png" width="100%" />
@@ -51,7 +51,7 @@ programs are refined and repaired based on their results on example unit tests o
 
 The code requires some dependencies as specified in `requirements.txt`. Please follow the relevant libraries to install or run: 
 
-<pre/>pip install -r requirements.txt</pre>
+`pip install -r requirements.txt`
 
 ## Datasets ##
 
