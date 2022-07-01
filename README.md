@@ -42,6 +42,15 @@ Hung Le, Yue Wang, Akhilesh Deepak Gotmare, Silvio Savarese, Steven C.H. Hoi
 
 ### Method <a name="method"></a>
 
+
+<p align="center">
+<img src="images/ezgif-1-12f629284e.gif" width="100%" />
+</p>
+
+
+* During training, we treat the code-generating language models as an actor network, and introduce a critic network that is trained to predict the functional correctness of generated programs and provide dense feedback signals to the actor. 
+* During inference, we introduce a new generation procedure with a critical sampling strategy that allows a model to automatically regenerate programs based on feedback from example unit tests and critic scores. 
+
 <!---
 <p align="center">
 <img src="images/coderl_training.png" width="100%" />
