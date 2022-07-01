@@ -11,17 +11,10 @@ Authors:
 Hung Le, Yue Wang, Akhilesh Deepak Gotmare, Silvio Savarese, Steven C.H. Hoi 
 
 
-<!---
-If you find the paper or the source code useful to your projects, please cite the following bibtex: 
-<pre>
-TBA
-</pre>
--->
-
 ### Contents:
-* [x] [CodeRL Overview](##coderl)
-	* [x] [Abstract](###abstract)
-	* [x] [Model Architecture](###model)
+* [x] [CodeRL](##coderl)
+	* [x] [Overview](###abstract)
+	* [x] [Method](###method)
 * [x] [Installation](##install)
 * [x] [Datasets](##datasets)
 	* [ ] [Example Unit Tests](###exampletests)
@@ -37,11 +30,7 @@ TBA
 * [x] [License](#license) 
 
  
-### Abstract <a name="abstract"></a>
-
-Program synthesis or code generation aims to generate a program that satisfies a problem specification. Recent approaches using large-scale pretrained language models (LMs) have shown promising results, yet they have some critical limitations. In particular, they often follow a standard supervised fine-tuning procedure to train a
-code generation model from natural language problem descriptions and ground-truth programs only. Such a paradigm largely ignores some important but potentially useful signals in the problem specification such as unit tests, 
-which thus results in poor performance when solving complex unseen coding tasks.  To address the limitations, we propose **CodeRL**, a new framework for program synthesis tasks through pretrained LMs and deep reinforcement learning (RL). Specifically, during training, we treat the code-generating LM as an actor network, and introduce a critic network that is trained to predict the functional correctness of generated programs and provide dense feedback signals to the actor. During inference, we introduce a new generation procedure with a critical sampling strategy that allows a model to automatically regenerate programs based on feedback from example unit tests and critic scores. For the model backbones, we extended the encoder-decoder architecture of CodeT5 with enhanced learning objectives, larger model sizes, and better pretraining data. Our method not only achieves new SOTA results on the challenging APPS benchmark, but also shows strong zero-shot transfer capability with new SOTA results on the simpler MBPP benchmark. 
+### Overview <a name="abstract"></a>
 
 <p align="center">
 <img src="images/coderl_overview.png" width="100%" />
@@ -51,8 +40,9 @@ which thus results in poor performance when solving complex unseen coding tasks.
 </p>
 
 
-### Model Architecture <a name="model"></a>
+### Method <a name="method"></a>
 
+<!---
 <p align="center">
 <img src="images/coderl_training.png" width="100%" />
 <b>Overview of our actor-critic framework to optimize pretrained LMs for program
@@ -64,6 +54,7 @@ synthesis</b>: We treat the LM as an actor network and sample synthetic samples 
 <b>Overview of our Critic Sampling (CS) approach for program synthesis during inference</b>:
 programs are refined and repaired based on their results on example unit tests of the corresponding problems. Program candidates are sampled by their critic-predicted scores at the token or sequence level. Dotted lines indicate optional processes that apply during program refining or repairing.
 </p>
+-->
 
 
 ## Installation  <a name="install"></a>
@@ -72,7 +63,7 @@ The code requires some dependencies as specified in `requirements.txt`. Please f
 
 `pip install -r requirements.txt`
 
-## Datasets ## <a name="datasets"></a>
+## Datasets <a name="datasets"></a>
 
 For pretraining, we use the [Python Github Code Dataset (GCPY)](https://huggingface.co/datasets/lvwerra/github-code). 
 We filter the dataset by keeping only the code with licenses that at least permit academic use (“mit”, “apache-2”, “bsd-3-clause”, “bsd-2- 126 clause”, “cc0-1.0”, “unlicense”, “isc”). Please see the paper for more details on pretraining data preprocessing and pretraining. 
@@ -167,6 +158,10 @@ The problem is from the APPS benchmark, and the solution programs are generated 
 
 ## Citation <a name="cite"></a>
 
+If you find the paper or the source code useful to your projects, please cite the following bibtex: 
+<pre>
+TBA
+</pre>
 
 
 ## License <a name="license"></a>
