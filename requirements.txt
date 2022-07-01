@@ -1,0 +1,3 @@
+torch==1.9.1
+transformers==4.20.1
+pyext==0.7
