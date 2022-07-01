@@ -2,7 +2,7 @@
   <img src="images/logo.jpg" width="50%">
 </p>
 
-## CodeRL: Mastering Code Generation through Pretrained Models and Deep Reinforcement Learning
+## CodeRL: Mastering Code Generation through Pretrained Models and Deep Reinforcement Learning <a name="corl"></a>
 
 
 This is the official code for the paper **CodeRL: Mastering Code Generation through Pretrained Models and Deep Reinforcement Learning**.  
@@ -18,8 +18,26 @@ TBA
 </pre>
 -->
 
+### Contents:
+* [x] [CodeRL Overview](##coderl)
+	* [x] [Abstract](###abstract)
+	* [x] [Model Architecture](###model)
+* [x] [Installation](##install)
+* [x] [Datasets](##datasets)
+	* [] [Example Unit Tests](###exampletests)
+* [] [Models](##models)
+* [] [Processes](##processes)  
+	* [x] [Generating Programs](###generate)
+	* [x] [Running Unit Tests](###runtests)
+	* [x] [Evaluating Programs](###evaluate)
+	* [] [Generating Programs with Critic Sampling](###criticsampling)
+	* [] [Training CodeT5](###training)
+* [x] [Example Generated Programs](##exampleprogram)
+* [] [Citation] (##cite)
+* [x] [License](#license) 
 
-### Abstract
+ 
+### Abstract <a name="abstract"></a>
 
 Program synthesis or code generation aims to generate a program that satisfies a problem specification. Recent approaches using large-scale pretrained language models (LMs) have shown promising results, yet they have some critical limitations. In particular, they often follow a standard supervised fine-tuning procedure to train a
 code generation model from natural language problem descriptions and ground-truth programs only. Such a paradigm largely ignores some important but potentially useful signals in the problem specification such as unit tests, 
@@ -33,7 +51,7 @@ which thus results in poor performance when solving complex unseen coding tasks.
 </p>
 
 
-### Model Architecture
+### Model Architecture <a name="model"></a>
 
 <p align="center">
 <img src="images/coderl_training.png" width="100%" />
@@ -48,13 +66,13 @@ programs are refined and repaired based on their results on example unit tests o
 </p>
 
 
-## Installation 
+## Installation  <a name="install"></a>
 
 The code requires some dependencies as specified in `requirements.txt`. Please follow the relevant libraries to install or run: 
 
 `pip install -r requirements.txt`
 
-## Datasets ##
+## Datasets ## <a name="datasets"></a>
 
 For pretraining, we use the [Python Github Code Dataset (GCPY)](https://huggingface.co/datasets/lvwerra/github-code). 
 We filter the dataset by keeping only the code with licenses that at least permit academic use (“mit”, “apache-2”, “bsd-3-clause”, “bsd-2- 126 clause”, “cc0-1.0”, “unlicense”, “isc”). Please see the paper for more details on pretraining data preprocessing and pretraining. 
@@ -68,11 +86,11 @@ On both benchmarks, we follow the same way of preprocessing data and constructin
 
 Download and unzip all files into the `data` folder.
 
-### Example Unit Tests
+### Example Unit Tests <a name="exampletests"></a>
 In addition to the original hidden unit tests on APPS, we also utilize the example tests that are often embedded in problem descriptions.
 We will release the data with example unit tests we extracted on the APPS test split. 
 
-## Models 
+## Models <a name="models"></a>
 
 We will release the following pretrained/finetuned model checkpoints: 
 
@@ -82,9 +100,9 @@ We will release the following pretrained/finetuned model checkpoints:
 
 Download all files into the `models` folder.
 
-## Processes
+## Processes <a name="processes"></a>
 
-### Generating Programs 
+### Generating Programs <a name="generate"></a>
 
 We created `scripts/generate.sh` to generate programs on the APPS benchmark. You can directly run this file by configuring the following parameters: 
 
@@ -104,7 +122,7 @@ Other parameters are defined in the file `utils/generate_config.py`.
 Running the generation script will output programs, each of which is saved into a `json` file, including data fields `code` (list of output programs) and `prompt` (constructed input sequence to the LM model).
 
 
-### Running Unit Tests  
+### Running Unit Tests  <a name="runtests"></a>
 
 Once the programs are generated, they are evaluated against the corresponding unseen unit tests in each problem. 
 
@@ -128,26 +146,30 @@ Running the script will output test results for each program. For each test samp
 Compared to the original implementation from APPS, we adopt one trick which will exit the unit testing loop if a program does not pass any test case. This will speed up the testing process while the final passing rate measures are not affected. Refer to the `run_test` function in `utils/testing_utils.py` for more details. 
 
 
-### Evaluating Programs 
+### Evaluating Programs <a name="evaluate"></a>
 To compute the pass@k metrics, rather than using the APPS evaluation metrics, we follow the official implementation of the [HumanEval benchmark](https://github.com/openai/human-eval) (which better measures pass@k normalized by the number of possible k programs)
 
-#### Generating Programs with Critic Sampling
+### Generating Programs with Critic Sampling <a name="criticsampling"></a>
 
 We will release the implementation details of our critic sampling procedure. 
 
-### Training CodeT5 
+### Training CodeT5 <a name="training"></a>
 
 We will release the implementation details of model training/finetuning. 
 
 
-## Example Generated Programs
+## Example Generated Programs <a name="exampleprogram"></a>
 
 <p align="center">
 <img src="images/example_code.png" width="100%" />
 The problem is from the APPS benchmark, and the solution programs are generated by CodeT5 and CodeRL.
 </p>
 
-## License
+## Citation <a name="cite"></a>
+
+
+
+## License <a name="license"></a>
 
 The code is released under BSD 3-Clause - see `LICENSE.txt` for details.
 
