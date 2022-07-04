@@ -10,11 +10,12 @@ This is the official code for the paper **CodeRL: Mastering Code Generation thro
 Authors:
 Hung Le, Yue Wang, Akhilesh Deepak Gotmare, Silvio Savarese, Steven C.H. Hoi 
 
+<p align="center">
+<img src="images/ezgif-1-12f629284e.gif" width="100%" />
+</p>
 
 ### Contents:
-* [x] [CodeRL](##coderl)
-	* [x] [Overview](###abstract)
-	* [x] [Method](###method)
+* [x] [CodeRL Overview](##coderl)
 * [x] [Installation](##install)
 * [x] [Datasets](##datasets)
 	* [ ] [Example Unit Tests](###exampletests)
@@ -29,27 +30,19 @@ Hung Le, Yue Wang, Akhilesh Deepak Gotmare, Silvio Savarese, Steven C.H. Hoi
 * [ ] [Citation](##cite)
 * [x] [License](#license) 
 
- 
-### Overview <a name="abstract"></a>
+## Overview  <a name="coderl"></a>
 
-<p align="center">
+
+ <p align="center">
 <img src="images/coderl_overview.png" width="100%" />
  <br>
 <b>An example program synthesis task (Right)</b>: Each task includes a problem specification in natural language, which often contains example input and output pairs. The expected output is a program that is checked for functional correctness against some unit tests. 
 <b>A high-level overview of our CodeRL framework for program synthesis (Left)</b>: Our CodeRL framework treats pretrained language model (LM) as a stochastic policy, token predictions as actions, and rewards can be estimated based on unit test results of output programs
 </p>
 
-
-### Method <a name="method"></a>
-
-
-<p align="center">
-<img src="images/ezgif-1-12f629284e.gif" width="100%" />
-</p>
-
-
 * During training, we treat the code-generating language models as an actor network, and introduce a critic network that is trained to predict the functional correctness of generated programs and provide dense feedback signals to the actor. 
 * During inference, we introduce a new generation procedure with a critical sampling strategy that allows a model to automatically regenerate programs based on feedback from example unit tests and critic scores. 
+
 
 <!---
 <p align="center">
