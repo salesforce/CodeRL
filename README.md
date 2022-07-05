@@ -25,7 +25,6 @@ Authors:
 	* [x] [Running Unit Tests](###runtests)
 	* [x] [Evaluating Programs](###evaluate)
 	* [ ] [Generating Programs with Critic Sampling](###criticsampling)
-	* [ ] [Training CodeT5](###training)
 * [x] [Example Generated Programs](##exampleprogram)
 * [ ] [Citation](##cite)
 * [x] [License](#license) 
@@ -146,10 +145,6 @@ To compute the pass@k metrics, rather than using the APPS evaluation metrics, we
 ### Generating Programs with Critic Sampling <a name="criticsampling"></a>
 
 We will release the implementation details of our critic sampling procedure. 
-
-### Training CodeT5 <a name="training"></a>
-
-We will release the implementation details of model training/finetuning. 
 
 
 ## Example Generated Programs <a name="exampleprogram"></a>
