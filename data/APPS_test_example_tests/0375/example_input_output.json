@@ -1,0 +1,1 @@
+{"inputs": ["7\nreading\ntrading\n", "5\nsweet\nsheep\n", "3\ntoy\ntry\n"], "outputs": ["1\n", "0\n", "2\n"]}

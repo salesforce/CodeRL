@@ -1,0 +1,1 @@
+{"inputs": ["abba\n", "cba\n"], "outputs": ["Mike\nAnn\nAnn\nMike\n", "Mike\nMike\nMike"]}

@@ -1,0 +1,1 @@
+{"inputs": ["8 3\n++xx+x++\n", "8 3\nxxxxxxxx\n"], "outputs": ["++xx+o++\n", "xxoooooo"]}

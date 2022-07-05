@@ -1,0 +1,1 @@
+{"inputs": ["9\nabacbecfd\n", "8\naaabbcbb\n", "7\nabcdedc\n", "5\nabcde\n"], "outputs": ["YES\n001010101\n", "YES\n01011011\n", "NO\n", "YES\n00000"]}

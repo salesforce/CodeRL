@@ -1,0 +1,1 @@
+{"inputs": ["9\n+ 3 2\n+ 2 3\n? 1 20\n? 3 3\n? 2 3\n+ 1 5\n? 10 10\n? 1 5\n+ 1 1\n"], "outputs": ["NO\nYES\nYES\nYES\nNO\n"]}

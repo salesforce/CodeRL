@@ -1,0 +1,1 @@
+{"inputs": ["12\ntoosmallword\n", "35\nTheQuickBrownFoxJumpsOverTheLazyDog\n"], "outputs": ["NO\n", "YES"]}

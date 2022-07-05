@@ -1,0 +1,1 @@
+{"inputs": ["6 6\n..S...\n..S.W.\n.S....\n..W...\n...W..\n......\n", "1 2\nSW\n", "5 5\n.S...\n...S.\nS....\n...S.\n.S...\n"], "outputs": ["Yes\n..SD..\n..SDW.\n.SD...\n.DW...\nDD.W..\n......\n", "No\n", "Yes\n.S...\n...S.\nS.D..\n...S.\n.S...\n"]}

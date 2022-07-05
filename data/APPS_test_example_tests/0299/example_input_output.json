@@ -1,0 +1,1 @@
+{"inputs": ["2\n2 8\n", "3\n5 1 10\n", "7\n3 3 2 7 9 6 8\n"], "outputs": ["biceps\n", "back\n", "chest\n"]}

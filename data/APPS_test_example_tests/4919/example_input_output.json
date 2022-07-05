@@ -1,0 +1,1 @@
+{"inputs": ["4\nIceland 2016\nSweden 2015\nIceland 1982\nNorway 1999\n3\nSweden 1\nIceland 1\nIceland 2\n"], "outputs": ["2015\n1982\n2016"]}

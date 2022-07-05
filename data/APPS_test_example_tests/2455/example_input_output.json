@@ -1,0 +1,1 @@
+{"inputs": ["4\nOXXXOXOOXOOX\nOXOXOXOXOXOX\nXXXXXXXXXXXX\nOOOOOOOOOOOO\n"], "outputs": ["3 1x12 2x6 4x3\n4 1x12 2x6 3x4 6x2\n6 1x12 2x6 3x4 4x3 6x2 12x1\n0"]}

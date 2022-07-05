@@ -1,0 +1,1 @@
+{"inputs": ["Display the minimum number of characters needed to encode the route.\nWNEENWEENEENE\n", "NSEW\n"], "outputs": ["10\n", "4"]}

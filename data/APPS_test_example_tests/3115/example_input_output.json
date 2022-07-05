@@ -1,0 +1,1 @@
+{"inputs": ["3 3\n0 > 1\n1 = 2\n0 = 2\n", "5 5\n0 = 1\n1 = 2\n3 = 4\n0 > 3\n1 > 4\n"], "outputs": ["inconsistent\n", "consistent"]}

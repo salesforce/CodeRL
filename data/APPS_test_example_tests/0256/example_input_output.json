@@ -1,0 +1,1 @@
+{"inputs": ["1 100\n100 1\n99 99\n99 99\n", "1 1\n2 2\n3 3\n2 2\n", "3 3\n2 2\n1 1\n2 2\n"], "outputs": ["Team 1\n", "Team 2\n", "Draw\n"]}

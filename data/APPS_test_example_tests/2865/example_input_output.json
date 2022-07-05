@@ -1,0 +1,1 @@
+{"inputs": ["0 5\n3 1 4 5\n3 1 4 6\n", "10 0\n2 1 2\n1 1\n"], "outputs": ["bumper tap at time 6\n", "bumper tap at time 8"]}

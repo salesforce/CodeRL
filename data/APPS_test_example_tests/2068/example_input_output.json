@@ -1,0 +1,1 @@
+{"inputs": ["5\ntourist reposted Polycarp\nPetr reposted Tourist\nWJMZBMR reposted Petr\nsdya reposted wjmzbmr\nvepifanov reposted sdya\n", "6\nMike reposted Polycarp\nMax reposted Polycarp\nEveryOne reposted Polycarp\n111 reposted Polycarp\nVkCup reposted Polycarp\nCodeforces reposted Polycarp\n", "1\nSoMeStRaNgEgUe reposted PoLyCaRp\n"], "outputs": ["6\n", "2\n", "2"]}

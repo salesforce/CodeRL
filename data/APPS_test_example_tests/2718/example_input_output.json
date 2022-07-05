@@ -1,0 +1,1 @@
+{"inputs": ["3 2\n", "3 3\n", "5 2\n", "5 3\n"], "outputs": ["lose\n", "win\n", "win\n", "win"]}

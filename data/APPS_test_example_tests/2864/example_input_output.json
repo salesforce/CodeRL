@@ -1,0 +1,1 @@
+{"inputs": ["1\nB I P C F\nA G M - - -\n", "2\nA B C D H\nF G M M\nF H M - *\n"], "outputs": ["AGM\n", "E??"]}

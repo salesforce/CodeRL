@@ -1,0 +1,1 @@
+{"inputs": ["abacaba\n", "X12345\n", "CONTEST_is_STARTED!!11\n"], "outputs": ["Too weak\n", "Too weak\n", "Correct"]}

@@ -1,0 +1,1 @@
+{"inputs": ["3 10 13\nJohn\nKelly\nGeorge\nKelly 1\nGeorge 2\nKelly 1\nJohn 2\nGeorge 1\nJohn 3\nKelly 3\nKelly 1\nGeorge 3\nGeorge 1\nJohn 3\nGeorge 3\nKelly 1\n", "4 10 13\nBob\nNina\nJess\nTim\nNina 2\nBob 2\nNina 1\nJess 3\nBob 2\nJess 2\nNina 1\nJess 2\nNina 3\nBob 1\nNina 3\nJess 3\nBob 2\n"], "outputs": ["George wins!\n", "Nina wins!\nJess wins!"]}

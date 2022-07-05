@@ -1,0 +1,1 @@
+{"inputs": ["2 2\nR1\n", "2 1\nR1\n", "6 4\nGO?GO!\n"], "outputs": ["PRINT 1\nLEFT\nPRINT R\n", "PRINT R\nRIGHT\nPRINT 1\n", "RIGHT\nRIGHT\nPRINT !\nLEFT\nPRINT O\nLEFT\nPRINT G\nLEFT\nPRINT ?\nLEFT\nPRINT O\nLEFT\nPRINT G\n"]}

@@ -1,0 +1,1 @@
+{"inputs": ["8\n3 6 5 4 2 7 1 8\n", "15\n3 11 2 5 10 9 7 13 15 8 4 12 6 1 14\n"], "outputs": ["BAAAABAB\n", "ABAAAABBBAABAAB\n"]}

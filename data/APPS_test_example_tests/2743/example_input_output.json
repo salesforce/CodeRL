@@ -1,0 +1,1 @@
+{"inputs": ["3 3\n/-\\\n|.|\n#.#\n", "3 3\n...\n___\n..|\n", "3 3\n./\\\n.\\/\n.|.\n"], "outputs": ["balanced\n", "left\n", "balanced"]}

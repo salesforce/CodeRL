@@ -1,0 +1,1 @@
+{"inputs": ["5 2 3\nHello\n", "10 9 5\nCodeforces\n", "6 4 5\nPrivet\n", "8 1 1\nabacabac\n"], "outputs": ["2\nHe\nllo\n", "2\nCodef\norces\n", "-1\n", "8\na\nb\na\nc\na\nb\na\nc"]}

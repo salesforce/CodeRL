@@ -1,0 +1,1 @@
+{"inputs": ["a<bc<\n", "foss<<rritun\n"], "outputs": ["b\n", "forritun"]}

@@ -1,0 +1,1 @@
+{"inputs": ["9\nabacbecfd\n", "8\naaabbcbb\n", "7\nabcdedc\n", "5\nabcde\n"], "outputs": ["2\n1 1 2 1 2 1 2 1 2 \n", "2\n1 2 1 2 1 2 1 1\n", "3\n1 1 1 1 1 2 3 \n", "1\n1 1 1 1 1"]}

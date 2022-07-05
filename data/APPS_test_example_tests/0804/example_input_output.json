@@ -1,0 +1,1 @@
+{"inputs": ["yandex\n6\n", "yahoo\n5\n", "google\n7\n"], "outputs": ["0\n", "1\n", "impossible\n"]}

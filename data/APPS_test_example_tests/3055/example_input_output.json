@@ -1,0 +1,1 @@
+{"inputs": ["2\nThoreTiemann\nThoreHusfeldt\n", "2\nThoreHusfeldt\nJohanSannemo\n", "2\nThoreHusfeldter\nThoreHusfeldt\n"], "outputs": ["ThoreH\n", "Thore is awesome\n", "Thore sucks"]}

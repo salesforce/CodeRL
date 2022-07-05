@@ -1,0 +1,1 @@
+{"inputs": ["6\nBlue\nOrange\nPink\nGreen\nRed\nYellow\n", "12\nBlue\nOrange\nPink\nGreen\nRed\nYellow\nYellow\nRed\nGreen\nPink\nOrange\nBlue\n"], "outputs": ["1\n", "2"]}

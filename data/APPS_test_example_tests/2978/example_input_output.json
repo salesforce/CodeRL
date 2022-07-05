@@ -1,0 +1,1 @@
+{"inputs": ["2\n1 1 2 1\n1 1 1 2\n3\n2 0 2 2\n2 0 0 3\n0 0 2 2\n"], "outputs": ["different\nsame\nsame"]}

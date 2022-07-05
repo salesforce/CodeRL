@@ -1,0 +1,1 @@
+{"inputs": ["4\nmail\nai\nlru\ncf\n", "3\nkek\npreceq\ncheburek\n"], "outputs": ["cfmailru\n", "NO\n"]}

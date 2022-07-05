@@ -1,0 +1,1 @@
+{"inputs": ["5 1\npolandball\nis\na\ncool\ncharacter\nnope\n", "2 2\nkremowka\nwadowicka\nkremowka\nwiedenska\n", "1 2\na\na\nb\n"], "outputs": ["YES\n", "YES\n", "NO\n"]}

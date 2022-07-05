@@ -1,0 +1,1 @@
+{"inputs": ["4 26\nbear\n", "2 7\naf\n", "3 1000\nhey\n"], "outputs": ["roar\n", "db\n", "-1"]}

@@ -1,0 +1,1 @@
+{"inputs": ["6\nac?b?c\n", "7\n???????\n", "9\ncccbbbaaa\n", "5\na???c\n"], "outputs": ["24\n", "2835\n", "0\n", "46\n"]}

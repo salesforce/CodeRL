@@ -1,0 +1,1 @@
+{"inputs": ["abcdef\n1\n2\n", "vwxyz\n2\n2 2\n", "abcdef\n3\n1 2 3\n"], "outputs": ["aedcbf\n", "vwxyz\n", "fbdcea"]}

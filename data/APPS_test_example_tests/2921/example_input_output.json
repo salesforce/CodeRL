@@ -1,0 +1,1 @@
+{"inputs": ["10.00 9.0 2\nfire 2 1/1 4.00\nwater 10 1/2 2.00\n"], "outputs": ["fire 2\nwater 1"]}

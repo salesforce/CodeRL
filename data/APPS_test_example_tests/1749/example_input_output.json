@@ -1,0 +1,1 @@
+{"inputs": ["5 2 4\n3 4 2 3 1\n3 2 3 4 1\n", "3 1 2\n1 2 3\n3 1 2\n", "4 2 4\n1 1 1 1\n1 1 1 1\n"], "outputs": ["TRUTH\n", "LIE\n", "TRUTH\n"]}

@@ -1,0 +1,1 @@
+{"inputs": ["3\n#book\n#bigtown\n#big\n", "3\n#book\n#cool\n#cold\n", "4\n#car\n#cart\n#art\n#at\n", "3\n#apple\n#apple\n#fruit\n"], "outputs": ["#b\n#big\n#big\n", "#book\n#co\n#cold\n", "#\n#\n#art\n#at\n", "#apple\n#apple\n#fruit\n"]}

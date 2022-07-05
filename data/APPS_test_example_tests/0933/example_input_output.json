@@ -1,0 +1,1 @@
+{"inputs": ["helloo\n", "woooooow\n"], "outputs": ["hello\n", "woow\n"]}

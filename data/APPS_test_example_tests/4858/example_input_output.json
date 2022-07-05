@@ -1,0 +1,1 @@
+{"inputs": ["2 2 'X'\nX^\n--\n", "3 12 'A'\nABABABABABAC\nBABABABABABB\nABABABABABAB\n"], "outputs": [".^\n--\n", "BBABABABABAC\nBBBABABABABA\nBBABABABABAB"]}

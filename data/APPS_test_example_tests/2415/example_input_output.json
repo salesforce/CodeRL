@@ -1,0 +1,1 @@
+{"inputs": ["GENIUS\n", "DOCTOR\n", "IRENE\n", "MARY\n", "SMARTPHONE\n", "REVOLVER\n", "HOLMES\n", "WATSON\n"], "outputs": ["YES\n", "NO\n", "YES\n", "NO\n", "NO\n", "YES\n", "NO\n", "YES"]}

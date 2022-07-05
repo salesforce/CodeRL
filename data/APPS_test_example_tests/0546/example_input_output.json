@@ -1,0 +1,1 @@
+{"inputs": ["ab\na?a\n2\naaa\naab\n", "abc\na?a?a*\n4\nabacaba\nabaca\napapa\naaaaax\n"], "outputs": ["YES\nNO\n", "NO\nYES\nNO\nYES\n"]}

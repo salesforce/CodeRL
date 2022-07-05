@@ -1,0 +1,1 @@
+{"inputs": ["3\n3\n0 chocolate\n1 icecream\n2 cookies\n3\nchocolate\ncookies\nicecream\n", "3\n4\n0 chocolate\n1 icecream\n2 cookies\n2 chocolate\n3\nchocolate\nicecream\ncookies\n"], "outputs": ["impossible\n", "unique"]}

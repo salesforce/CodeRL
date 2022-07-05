@@ -1,0 +1,1 @@
+{"inputs": ["1\nSimon says smile.\n", "3\nSimon says raise your right hand.\nLower your right hand.\nSimon says raise your left hand.\n"], "outputs": [" smile.\n", " raise your right hand.\n raise your left hand."]}

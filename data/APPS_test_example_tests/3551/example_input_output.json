@@ -1,0 +1,1 @@
+{"inputs": ["2\n7 8\n10\n"], "outputs": ["fill 2\ntransfer 2 1\ntransfer 2 0\ndiscard 1\nfill 2\ntransfer 2 1\ntransfer 2 0\ndiscard 1\nfill 2\ntransfer 2 0"]}

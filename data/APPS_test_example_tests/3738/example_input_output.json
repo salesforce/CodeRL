@@ -1,0 +1,1 @@
+{"inputs": ["2 2\nRU\n", "1 2\nRU\n", "-1 1000000000\nLRRLU\n", "0 0\nD\n"], "outputs": ["Yes\n", "No\n", "Yes\n", "Yes\n"]}

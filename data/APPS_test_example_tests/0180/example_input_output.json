@@ -1,0 +1,1 @@
+{"inputs": ["hw?ap*yn?eww*ye*ar\n12\n", "ab?a\n2\n", "ab?a\n3\n", "ababb\n5\n", "ab?a\n1\n"], "outputs": ["happynewyear\n", "aa\n", "aba\n", "ababb\n", "Impossible"]}

@@ -1,0 +1,1 @@
+{"inputs": ["AB\nXC\nXB\nAC\n", "AB\nXC\nAC\nBX\n"], "outputs": ["YES\n", "NO\n"]}

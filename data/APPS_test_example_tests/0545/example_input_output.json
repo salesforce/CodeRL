@@ -1,0 +1,1 @@
+{"inputs": ["3 2\nabc\nxyc\n", "1 0\nc\nb\n"], "outputs": ["ayd\n", "-1"]}

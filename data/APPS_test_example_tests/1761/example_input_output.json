@@ -1,0 +1,1 @@
+{"inputs": ["3\ni\nlove\nyou\n<3i<3love<23you<3\n", "7\ni\nam\nnot\nmain\nin\nthe\nfamily\n<3i<>3am<3the<3<main<3in<3the<3><3family<3\n"], "outputs": ["yes\n", "no\n"]}

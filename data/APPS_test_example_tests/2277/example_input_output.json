@@ -1,0 +1,1 @@
+{"inputs": ["3\n1 2 3\n2\n1 2\n2 3\n", "4\n1 2 4 3\n4\n1 1\n1 4\n1 4\n2 3\n"], "outputs": ["odd\neven\n", "odd\nodd\nodd\neven\n"]}

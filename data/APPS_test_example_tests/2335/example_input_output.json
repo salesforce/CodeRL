@@ -1,0 +1,1 @@
+{"inputs": ["4\n1 G\n5 R\n10 B\n15 G\n", "4\n1 G\n2 R\n3 B\n10 G\n"], "outputs": ["23\n", "12\n"]}

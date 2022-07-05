@@ -1,0 +1,1 @@
+{"inputs": ["4  2\n$duud$\n", "10 1\n$dduddudddu$\n"], "outputs": ["4\n", "6\n"]}

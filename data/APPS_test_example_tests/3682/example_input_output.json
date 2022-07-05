@@ -1,0 +1,1 @@
+{"inputs": ["2\nHelloWorld.c\nint Main() {\n    printf(\"Hello %d\\n\",i);\n}\n***END***\nAdd.c\nint Main() {\n  for (int i=0; i<10; i++)\n    sum += i;\n  printf(\"SUM %d\", sum);\n}\n***END***\nint Main() {\n  printf(\"Hello %d\\n\",i);\n  printf(\"THE END\\n\");\n}\n***END***\n"], "outputs": ["2 HelloWorld.c"]}

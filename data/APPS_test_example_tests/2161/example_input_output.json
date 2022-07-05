@@ -1,0 +1,1 @@
+{"inputs": ["2\nivan 1 00123\nmasha 1 00123\n", "3\nkarl 2 612 12\npetr 1 12\nkatya 1 612\n", "4\nivan 3 123 123 456\nivan 2 456 456\nivan 8 789 3 23 6 56 9 89 2\ndasha 2 23 789\n"], "outputs": ["2\nmasha 1 00123 \nivan 1 00123 \n", "3\nkatya 1 612 \npetr 1 12 \nkarl 1 612 \n", "2\ndasha 2 23 789 \nivan 4 789 123 2 456"]}

@@ -1,0 +1,1 @@
+{"inputs": ["1_wat\n2\n2_wat\nwat_1\n", "000\n3\n00\nooA\noOo\n", "_i_\n3\n__i_\n_1_\nI\n", "La0\n3\n2a0\nLa1\n1a0\n", "abc\n1\naBc\n", "0Lil\n2\nLIL0\n0Ril\n"], "outputs": ["Yes\n", "No\n", "No\n", "No\n", "No\n", "Yes\n"]}

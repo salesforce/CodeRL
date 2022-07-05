@@ -1,0 +1,1 @@
+{"inputs": ["4 4\n2 2 2 2\nhoni\noker\nnera\nirak\n"], "outputs": ["#.#.#.#.\n.#.#.#.#\n#.honi#.\n.#oker.#\n#.nera#.\n.#irak.#\n#.#.#.#.\n.#.#.#.#"]}

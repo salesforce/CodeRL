@@ -1,0 +1,1 @@
+{"inputs": ["5\napple\near\nreal\nletters\nstyle\n", "3\napple\nextra\napple\n", "2\napple\nneat\n"], "outputs": ["Fair Game\n", "Player 1 lost\n", "Player 2 lost"]}

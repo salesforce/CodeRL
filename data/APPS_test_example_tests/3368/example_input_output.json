@@ -1,0 +1,1 @@
+{"inputs": ["3 6\nmonkey 2 lion penguin\nlion 3 monkey penguin lion\npenguin 1 monkey\n"], "outputs": ["POSSIBLE"]}

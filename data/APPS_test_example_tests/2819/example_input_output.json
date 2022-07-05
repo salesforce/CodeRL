@@ -1,0 +1,1 @@
+{"inputs": ["2\n2 1\n1 2\n1 0\n0 -1\n", "3\n2 3\n1 3\n-2 1\n1 1\n1 0\n"], "outputs": ["Bob wins\n", "tie 3 1"]}

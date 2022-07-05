@@ -1,0 +1,1 @@
+{"inputs": ["9\nthe\nquick\nbrown\nfox\njumps\nover\na\nsleazy\ndog\n", "3\na\nb\nc\n"], "outputs": ["2\n", "0"]}

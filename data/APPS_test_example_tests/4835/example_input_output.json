@@ -1,0 +1,1 @@
+{"inputs": ["2 4 4\n1111\n1S01\n1011\n0U11\n", "2 4 4\n1111\n1S01\n1011\n0L11\n"], "outputs": ["2\n", "NOT POSSIBLE"]}

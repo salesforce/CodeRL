@@ -1,0 +1,1 @@
+{"inputs": ["8\nL 1\nR 2\nR 3\n? 2\nL 4\n? 1\nL 5\n? 1\n", "10\nL 100\nR 100000\nR 123\nL 101\n? 123\nL 10\nR 115\n? 100\nR 110\n? 115\n"], "outputs": ["1\n1\n2\n", "0\n2\n1\n"]}

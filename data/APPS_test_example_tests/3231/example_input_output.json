@@ -1,0 +1,1 @@
+{"inputs": ["4 2 1\n1 1\n2 0 2\n2 1 3\n1 2\n", "5 2 1\n1 1\n2 0 2\n2 1 3\n2 2 4\n1 3\n"], "outputs": ["home\n2\n2 0 1\n2 2 3\n", "detention"]}

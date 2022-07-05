@@ -1,0 +1,1 @@
+{"inputs": ["1 2\nV1 V2 V1 V1 V2\n", "2 1\nV1 V2 V1 V1 V2\n", "1 2\nR10 V1 V2 V1 E\n"], "outputs": ["5\n", "6\n", "30"]}

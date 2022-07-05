@@ -1,0 +1,1 @@
+{"inputs": ["AC|T\nL\n", "|ABC\nXYZ\n", "W|T\nF\n", "ABC|\nD\n"], "outputs": ["AC|TL\n", "XYZ|ABC\n", "Impossible\n", "Impossible"]}

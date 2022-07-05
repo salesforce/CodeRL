@@ -1,0 +1,1 @@
+{"inputs": ["5\nthreehorses\ngoodsubstrings\nsecret\nprimematrix\nbeautifulyear\n", "4\naa\nbdefghijklmn\nopqrstuvwxyz\nc\n"], "outputs": ["j\n", "ab\n"]}

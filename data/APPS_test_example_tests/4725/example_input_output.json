@@ -1,0 +1,1 @@
+{"inputs": ["string\n", "letter\n", "aaaaaa\n", "uncopyrightable\n", "ambidextrously\n", "assesses\n"], "outputs": ["4\n", "2\n", "0\n", "13\n", "12\n", "1"]}

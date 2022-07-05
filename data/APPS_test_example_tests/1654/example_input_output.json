@@ -1,0 +1,1 @@
+{"inputs": ["?aa?\nab\n", "??b?\nza\n", "abcd\nabacaba\n"], "outputs": ["baab\n", "azbz\n", "abcd\n"]}

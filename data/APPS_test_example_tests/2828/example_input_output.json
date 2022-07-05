@@ -1,0 +1,1 @@
+{"inputs": ["2\nab\nbc\n2 1\n", "3\nabc\nbcd\nadd\n1 2 3\n"], "outputs": ["DA\nbacdefghijklmnopqrstuvwxyz\n", "NE"]}

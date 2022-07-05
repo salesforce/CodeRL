@@ -1,0 +1,1 @@
+{"inputs": ["5\n01 0\n2 1\n2extra 0\n3 1\n99 0\n", "2\n1 0\n2 1\n", "5\n1 0\n11 1\n111 0\n1111 1\n11111 0\n"], "outputs": ["4\nmove 3 1\nmove 01 5\nmove 2extra 4\nmove 99 3\n", "3\nmove 1 3\nmove 2 1\nmove 3 2\n", "5\nmove 1 5\nmove 11 1\nmove 1111 2\nmove 111 4\nmove 11111 3"]}

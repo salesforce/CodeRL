@@ -1,0 +1,1 @@
+{"inputs": ["4\n10 10\n1 10\n6 9\n7 3\n"], "outputs": ["Infinite\nFinite\nInfinite\nFinite"]}

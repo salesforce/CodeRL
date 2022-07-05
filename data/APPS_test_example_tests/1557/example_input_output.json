@@ -1,0 +1,1 @@
+{"inputs": ["10 6 100\n17 5\n", "11 6 100\n12 5\n"], "outputs": ["4\nSTRIKE\nHEAL\nSTRIKE\nSTRIKE\n", "2\nSTRIKE\nSTRIKE\n"]}

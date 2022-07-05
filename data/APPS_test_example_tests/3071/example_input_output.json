@@ -1,0 +1,1 @@
+{"inputs": ["3 2\n", "2 3\n"], "outputs": ["A1-B2 B1-A2 A3-B3\nA2-B3 B2-A3 A1-B1\nA3-B1 B3-A1 A2-B2\n", "A1-B1 A2-C2 B2-C1\nA1-C1 A2-B1 B2-C2\nA1-B2 A2-C1 B1-C2\nA1-C2 A2-B2 B1-C1"]}

@@ -1,0 +1,1 @@
+{"inputs": ["-++-\n", "+-\n", "++\n", "-\n"], "outputs": ["Yes\n", "No\n", "Yes\n", "No\n"]}

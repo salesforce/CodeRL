@@ -1,0 +1,1 @@
+{"inputs": ["6\n4\nabab\n6\nqwerty\n5\naaaaa\n6\nalaska\n9\nlfpbavjsm\n1\np\n"], "outputs": ["abab\n1\nertyqw\n3\naaaaa\n1\naksala\n6\navjsmbpfl\n5\np\n1\n"]}

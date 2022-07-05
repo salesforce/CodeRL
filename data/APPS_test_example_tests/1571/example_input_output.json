@@ -1,0 +1,1 @@
+{"inputs": ["abab\nba\n", "defineintlonglong\nsignedmain\n", "rotator\nrotator\n", "cacdcdbbbb\nbdcaccdbbb\n"], "outputs": ["12\n", "0\n", "4\n", "24\n"]}

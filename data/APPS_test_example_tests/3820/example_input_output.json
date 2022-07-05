@@ -1,0 +1,1 @@
+{"inputs": ["6 10\ncode*s\ncodeforces\n", "6 5\nvk*cup\nvkcup\n", "1 1\nv\nk\n", "9 6\ngfgf*gfgf\ngfgfgf\n"], "outputs": ["YES\n", "YES\n", "NO\n", "NO\n"]}

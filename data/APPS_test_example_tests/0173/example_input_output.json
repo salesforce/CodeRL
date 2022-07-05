@@ -1,0 +1,1 @@
+{"inputs": ["3 3\n><>\nv^v\n", "4 6\n<><>\nv^v^v^\n"], "outputs": ["NO\n", "YES\n"]}

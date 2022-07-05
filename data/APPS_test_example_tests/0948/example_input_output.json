@@ -1,0 +1,1 @@
+{"inputs": ["4 4\nxxxx\nxfax\nxcex\nxxxx\n", "4 2\nxx\ncf\nae\nxx\n", "2 3\nfac\ncef\n", "1 4\nface\n"], "outputs": ["1\n", "1\n", "2\n", "0\n"]}

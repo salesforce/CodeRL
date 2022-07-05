@@ -1,0 +1,1 @@
+{"inputs": ["5 4\nabaca\n1 2\n1 3\n3 4\n4 5\n", "6 6\nxzyabc\n1 2\n3 1\n2 3\n5 4\n4 3\n6 4\n", "10 14\nxzyzyzyzqx\n1 2\n2 4\n3 5\n4 5\n2 6\n6 8\n6 5\n2 10\n3 9\n10 9\n4 6\n1 10\n2 8\n3 7\n"], "outputs": ["3\n", "-1\n", "4\n"]}

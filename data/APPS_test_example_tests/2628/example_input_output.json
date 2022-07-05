@@ -1,0 +1,1 @@
+{"inputs": ["\u00a02\n", "\u00a00\n"], "outputs": ["\u00a0[0,1,3,2]\nExplanation:\n00 - 0\n01 - 1\n11 - 3\n10 - 2\n", "\u00a0[0]\nExplanation: We define the gray code sequence to begin with 0.\n\u00a0            A gray code sequence of n has size = 2n, which for n = 0 the size is 20 = 1.\n\u00a0            Therefore, for n = 0 the gray code sequence is [0]."]}

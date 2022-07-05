@@ -1,0 +1,1 @@
+{"inputs": [" intervals = [[1,3],[6,9]], newinterval = [2,5]\n", " intervals = [[1,2],[3,5],[6,7],[8,10],[12,16]], newinterval = [4,8]\n"], "outputs": [" [[1,5],[6,9]]\n", " [[1,2],[3,10],[12,16]]\nExplanation: Because the new interval [4,8] overlaps with [3,5],[6,7],[8,10]."]}

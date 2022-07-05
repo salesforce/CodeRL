@@ -1,0 +1,1 @@
+{"inputs": ["6\nabcdef\nabdfec\n", "4\nabcd\naccd\n"], "outputs": ["4\n3 5 4 5 \n", "-1\n"]}

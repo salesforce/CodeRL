@@ -1,0 +1,1 @@
+{"inputs": ["3\n3 caterpillar 3 pupa 7 butterfly\n3 dove 3 pigeon 7 aaabaaajss\n3 mouse 1 electromouse 5 rat\n7\n0 electromouse\n500 electromouse\n1000 electromouse\n1500 rat\n2000 aaabaaajss\n2500 pigeon\n3000 butterfly\n"], "outputs": ["5100"]}

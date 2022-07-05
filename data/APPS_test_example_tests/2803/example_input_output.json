@@ -1,0 +1,1 @@
+{"inputs": ["pig\n2\ngoat\ntoad\n", "dog\n2\nsnake\nemu\n"], "outputs": ["goat\n", "?"]}

@@ -1,0 +1,1 @@
+{"inputs": ["4\nabac\n3\n2 1 0\nabc\n1\n0\nabba\n3\n1 0 1\necoosdcefr\n10\n38 13 24 14 11 5 3 24 17 0\n"], "outputs": ["aac\nb\naba\ncodeforces\n"]}

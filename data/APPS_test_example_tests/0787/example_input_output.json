@@ -1,0 +1,1 @@
+{"inputs": ["1\nabca\n", "2\naaacas\n", "4\nabc\n"], "outputs": ["YES\nabca\n", "YES\naaa\ncas\n", "NO\n"]}

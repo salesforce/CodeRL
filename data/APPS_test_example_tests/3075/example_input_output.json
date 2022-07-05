@@ -1,0 +1,1 @@
+{"inputs": ["3 10\n2 100\n1 10\n11 5\n", "3 10\n2 100\n1 10\n13 5\n"], "outputs": ["10\n", "cancel road trip"]}

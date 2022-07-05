@@ -1,0 +1,1 @@
+{"inputs": ["3\nadd 1\nremove\nadd 2\nadd 3\nremove\nremove\n", "7\nadd 3\nadd 2\nadd 1\nremove\nadd 4\nremove\nremove\nremove\nadd 6\nadd 7\nadd 5\nremove\nremove\nremove\n"], "outputs": ["1\n", "2\n"]}

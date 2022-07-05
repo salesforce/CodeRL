@@ -1,0 +1,1 @@
+{"inputs": ["3\nAbRb r Zz\n4\nxR abRb\naA xr\nzz Z\nxr y\n", "2\nRuruRu fedya\n1\nruruRU fedor\n"], "outputs": ["2 6\n", "1 10"]}

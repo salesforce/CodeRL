@@ -1,0 +1,1 @@
+{"inputs": ["2 2\nC M\nY Y\n", "3 2\nW W\nW W\nB B\n", "1 1\nW\n"], "outputs": ["#Color\n", "#Black&White\n", "#Black&White"]}

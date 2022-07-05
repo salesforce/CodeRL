@@ -1,0 +1,1 @@
+{"inputs": ["4\n0523\n", "2\n??\n", "8\n?054??0?\n", "6\n???00?\n"], "outputs": ["Bicarp\n", "Bicarp\n", "Bicarp\n", "Monocarp\n"]}

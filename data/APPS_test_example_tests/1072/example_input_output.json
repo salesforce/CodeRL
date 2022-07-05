@@ -1,0 +1,1 @@
+{"inputs": ["1 10\ncodeforces\n", "4 4\ncase\ncare\ntest\ncode\n", "5 4\ncode\nforc\nesco\ndefo\nrces\n"], "outputs": ["0\n", "2\n", "4\n"]}

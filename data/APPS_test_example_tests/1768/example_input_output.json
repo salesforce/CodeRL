@@ -1,0 +1,1 @@
+{"inputs": ["6\nkoyomi\n3\n1 o\n4 o\n4 m\n", "15\nyamatonadeshiko\n10\n1 a\n2 a\n3 a\n4 a\n5 a\n1 b\n2 b\n3 b\n4 b\n5 b\n", "10\naaaaaaaaaa\n2\n10 b\n10 z\n"], "outputs": ["3\n6\n5\n", "3\n4\n5\n7\n8\n1\n2\n3\n4\n5\n", "10\n10\n"]}

@@ -1,0 +1,1 @@
+{"inputs": ["d 4\ncab\ncda\nccc\nbadca\n", "c 4\nabc\nbca\ncab\naca\n", "f 2\ndea\ncfb\n"], "outputs": ["adcb\n", "IMPOSSIBLE\n", "AMBIGUOUS"]}

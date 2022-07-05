@@ -1,0 +1,1 @@
+{"inputs": ["6 6\nHSHSHS\n", "14 100\n...HHHSSS...SH\n", "23 50\nHHSS.......SSHHHHHHHHHH\n"], "outputs": ["1\n", "0\n", "8\n"]}

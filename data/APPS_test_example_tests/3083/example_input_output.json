@@ -1,0 +1,1 @@
+{"inputs": ["10\na 2 10 3\nb 1 6\nc 2 1 5\nd 1 9\ne 1 4\nf 1 2\ng 2 6 8\nh 0\ni 1 3\nj 1 7\n", "10\na 2 10 3\na 1 6\nc 2 1 5\nd 1 9\ne 1 4\nf 1 2\ng 2 6 8\nh 0\ni 1 3\nj 1 7\n"], "outputs": ["5 4 9 3 1 10 7 6 2\n", "fail"]}

@@ -1,0 +1,1 @@
+{"inputs": ["2\n3\n1 1 1\nRPS\n3\n3 0 0\nRPS\n"], "outputs": ["YES\nPSR\nNO\n"]}

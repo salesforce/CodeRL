@@ -1,0 +1,1 @@
+{"inputs": ["5\n1\n2\n-3\n-4\n3\n", "3\n-1\n-2\n3\n", "2\n4\n-4\n"], "outputs": ["second\n", "first\n", "second\n"]}

@@ -1,0 +1,1 @@
+{"inputs": ["1 3\nLeibniz Germany\nLeibniz\nLeibniz\nLeibniz\n", "4 5\nRamanujan India\nTorricelli Italy\nGauss Germany\nLagrange Italy\nRamanujan\nTorricelli\nTorricelli\nRamanujan\nLagrange\n", "2 2\nNewton England\nEuclid Greece\nNewton\nEuclid\n"], "outputs": ["Germany\nLeibniz\n", "Italy\nRamanujan\n", "England\nEuclid\n"]}

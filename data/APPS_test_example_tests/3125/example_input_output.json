@@ -1,0 +1,1 @@
+{"inputs": ["a+b-c\na-b+d-c\n", "knuth-morris-pratt\nknuthmorrispratt\n"], "outputs": ["- +d-\n", "<any> <empty>"]}

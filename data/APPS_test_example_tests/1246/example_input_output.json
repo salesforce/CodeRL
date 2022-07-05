@@ -1,0 +1,1 @@
+{"inputs": ["2\ninsert 3\ngetMin 4\n", "4\ninsert 1\ninsert 1\nremoveMin\ngetMin 2\n"], "outputs": ["4\ninsert 3\nremoveMin\ninsert 4\ngetMin 4\n", "6\ninsert 1\ninsert 1\nremoveMin\nremoveMin\ninsert 2\ngetMin 2\n"]}

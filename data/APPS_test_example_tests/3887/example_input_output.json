@@ -1,0 +1,1 @@
+{"inputs": ["? + ? - ? + ? + ? = 42\n", "? - ? = 1\n", "? = 1000000\n"], "outputs": ["Possible\n9 + 13 - 39 + 28 + 31 = 42\n", "Impossible\n", "Possible\n1000000 = 1000000"]}

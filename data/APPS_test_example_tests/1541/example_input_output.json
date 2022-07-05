@@ -1,0 +1,1 @@
+{"inputs": ["=^==\n", "9===^==1\n", "2==^7==\n", "41^52==\n"], "outputs": ["balance\n", "left\n", "right\n", "balance\n"]}

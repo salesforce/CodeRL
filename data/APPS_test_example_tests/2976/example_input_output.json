@@ -1,0 +1,1 @@
+{"inputs": ["sampras agassi\n6\n6:2 6:4\n3:6 7:5 2:6\n6:5 7:4\n7:6 7:6\n6:2 3:6\n6:2 1:6 6:8\n"], "outputs": ["da\nda\nne\nda\nne\nda"]}

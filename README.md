@@ -18,7 +18,7 @@ Authors:
 * [x] [CodeRL Overview](##coderl)
 * [x] [Installation](##install)
 * [x] [Datasets](##datasets)
-	* [ ] [Example Unit Tests](###exampletests)
+	* [x] [Example Unit Tests](###exampletests)
 * [ ] [Models](##models)
 * [ ] [Processes](##processes)  
 	* [x] [Generating Programs](###generate)
@@ -81,7 +81,8 @@ Download and unzip all files into the `data` folder.
 
 ### Example Unit Tests <a name="exampletests"></a>
 In addition to the original hidden unit tests on APPS, we also utilize the example tests that are often embedded in problem descriptions.
-We will release the data with example unit tests we extracted on the APPS test split. 
+After downloading and unzipping APPS, you can run the notebook `extract_example_test.ipynb` to extract and save example unit tests of APPS test samples into corresponding sample folder e.g. `data/APPS/test/0000/`.
+We release the example unit tests that we already extracted using this notebook in the folder `data/APPS_test_example_tests/`. The average number of example unit tests per sample is 1.9764.
 
 ## Models <a name="models"></a>
 

@@ -1,0 +1,1 @@
+{"inputs": ["aaaaa\naa\n", "axbaxxb\nab\n"], "outputs": ["2 2 1 1 0 0\n", "0 1 1 2 1 1 0 0\n"]}

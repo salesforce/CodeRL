@@ -1,0 +1,1 @@
+{"inputs": ["10\nAND 9 4\nIN 1\nIN 1\nXOR 6 5\nAND 3 7\nIN 0\nNOT 10\nIN 1\nIN 1\nAND 2 8\n"], "outputs": ["10110\n"]}

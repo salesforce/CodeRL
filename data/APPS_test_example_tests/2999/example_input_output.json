@@ -1,0 +1,1 @@
+{"inputs": ["5 63\nVader 3\nVoldemort 7\nBorgQueen 20\nTerminator 40\nMegatron 101\n"], "outputs": ["3\nBorgQueen\nTerminator\nVader"]}

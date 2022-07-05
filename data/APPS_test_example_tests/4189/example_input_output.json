@@ -1,0 +1,1 @@
+{"inputs": ["9\nbrie soft\ncamembert soft\nfeta soft\ngoat soft\nmuenster soft\nasiago hard\ncheddar hard\ngouda hard\nswiss hard\n", "6\nparmesan hard\nemmental hard\nedam hard\ncolby hard\ngruyere hard\nasiago hard\n"], "outputs": ["3\n", "4"]}

@@ -1,0 +1,1 @@
+{"inputs": ["6\nOO|OX\nXO|XX\nOX|OO\nXX|OX\nOO|OO\nOO|XX\n", "4\nXO|OX\nXO|XX\nOX|OX\nXX|OX\n", "5\nXX|XX\nXX|XX\nXO|OX\nXO|OO\nOX|XO\n"], "outputs": ["YES\n++|OX\nXO|XX\nOX|OO\nXX|OX\nOO|OO\nOO|XX\n", "NO\n", "YES\nXX|XX\nXX|XX\nXO|OX\nXO|++\nOX|XO\n"]}

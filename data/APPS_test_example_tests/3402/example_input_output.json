@@ -1,0 +1,1 @@
+{"inputs": ["abca\nbc cd da dd ee ff gg hh ii jj kk ll mm\nnn oo pp qq rr ss tt uu vv ww xx yy zz\n1\n2\n1 8\n"], "outputs": ["b\nc"]}

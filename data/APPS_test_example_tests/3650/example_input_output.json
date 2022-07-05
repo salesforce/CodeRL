@@ -1,0 +1,1 @@
+{"inputs": ["3 4 6\n1 1\n1 2\n2 2\n2 3\n3 3\n3 4\n"], "outputs": ["possible\n< 1\n^ 2\n< 2\n^ 3\n< 3"]}

@@ -1,0 +1,1 @@
+{"inputs": ["8\n1 5\n6 2\n3 1\n5 0\n4 6\n0 3\n2 7\n7 4\n", "4\n2 3\n1 0\n0 2\n3 1\n"], "outputs": ["CORRECT\n", "CORRECT"]}

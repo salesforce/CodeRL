@@ -1,0 +1,1 @@
+{"inputs": ["3\n2017 4 0\n2017 8 12000\n2018 8 42000\n", "3\n2017 4 0\n2017 8 12000\n2018 8 42001\n", "2\n2017 11 0\n2018 1 1000\n", "2\n2013 1 0\n2013 2 0\n"], "outputs": ["seems legit\n", "insufficient service\n", "tampered odometer\n", "seems legit"]}

@@ -1,0 +1,1 @@
+{"inputs": ["4\n2 3 4\n*aba\na*ab\nba*b\nabb*\n", "4\n2 3 4\n*abc\na*ab\nba*b\ncbb*\n"], "outputs": ["1\n4 1\n", "-1\n"]}

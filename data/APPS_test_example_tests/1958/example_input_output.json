@@ -1,0 +1,1 @@
+{"inputs": ["2 10\nhalf\nhalfplus\n", "3 10\nhalfplus\nhalfplus\nhalfplus\n"], "outputs": ["15\n", "55\n"]}

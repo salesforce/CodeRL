@@ -1,0 +1,1 @@
+{"inputs": ["3\n500 500 499\n0 0 999\n1000 1000 200\n", "4\n250 250 300\n750 250 300\n250 750 300\n750 750 300\n"], "outputs": ["Bill enters at (0.00, 1000.00) and leaves at (1000.00, 800.00).\n", "Bill will be bitten."]}

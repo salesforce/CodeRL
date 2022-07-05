@@ -1,0 +1,1 @@
+{"inputs": ["5 5 1\naaaaa\na...a\na.B.a\na...a\naaaaa\n1\n", "2 2 1\naB\naa\n1\n"], "outputs": ["12\n", "-1"]}

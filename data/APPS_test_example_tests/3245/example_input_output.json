@@ -1,0 +1,1 @@
+{"inputs": ["3\npython\np^ main.py\n^ -n 10\n", "5\npython\njava\n^\n^^^\n^^^\n"], "outputs": ["python\npython main.py\npython main.py -n 10\n", "python\njava\njava\npython\njava"]}

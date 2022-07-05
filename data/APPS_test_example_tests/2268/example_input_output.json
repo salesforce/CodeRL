@@ -1,0 +1,1 @@
+{"inputs": ["6 1\npolice\np m\n", "11 6\nabacabadaba\na b\nb c\na d\ne g\nf a\nb b\n"], "outputs": ["molice\n", "cdcbcdcfcdc\n"]}

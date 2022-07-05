@@ -1,0 +1,1 @@
+{"inputs": ["5 3 8\n1 1\n2 1\n3 1\n4 2\n5 2\n3 3\n4 3\n5 3\n"], "outputs": ["INDV 1\nINDV 2\nCORP 1\nINDV 4\nCORP 2\nINDV 3\nCORP 3\nINDV 5"]}

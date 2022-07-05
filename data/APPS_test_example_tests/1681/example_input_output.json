@@ -1,0 +1,1 @@
+{"inputs": ["aaabbac\naabbccac\n", "a\nz\n"], "outputs": ["6\n", "-1\n"]}

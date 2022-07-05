@@ -1,0 +1,1 @@
+{"inputs": ["...QK...\n........\n........\n........\n........\n........\n........\n...rk...\n", "rnbqkbnr\npppppppp\n........\n........\n........\n........\nPPPPPPPP\nRNBQKBNR\n", "rppppppr\n...k....\n........\n........\n........\n........\nK...Q...\n........\n"], "outputs": ["White\n", "Draw\n", "Black\n"]}

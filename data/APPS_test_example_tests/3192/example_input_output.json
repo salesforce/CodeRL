@@ -1,0 +1,1 @@
+{"inputs": ["4\na b c d\na 1\nimport d, b, c\nb 2\nimport d\nimport c\nc 1\nimport c\nd 0\n", "5\nclassa classb myfilec execd libe\nclassa 2\nimport classb\nimport myfilec, libe\nclassb 1\nimport execd\nmyfilec 1\nimport libe\nexecd 1\nimport libe\nlibe 0\n"], "outputs": ["c\n", "SHIP IT"]}

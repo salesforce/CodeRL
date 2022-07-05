@@ -1,0 +1,1 @@
+{"inputs": ["HHHH\n", "HQHQH\n", "HHQHHQH\n", "HHQQHHQQHH\n"], "outputs": ["Yes\n", "No\n", "No\n", "Yes\n"]}

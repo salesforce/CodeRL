@@ -1,0 +1,1 @@
+{"inputs": [" expression = \"!(f)\"\n", " expression = \"|(f,t)\"\n", " expression = \"&(t,f)\"\n", " expression = \"|(&(t,f,t),!(t))\"\n"], "outputs": [" true\n", " true\n", " false\n", " false\n"]}

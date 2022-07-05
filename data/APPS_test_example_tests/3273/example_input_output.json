@@ -1,0 +1,1 @@
+{"inputs": ["7\nn fox jumps ove\nuick brown f\nThe quick b\ny dog.\nrown fox\nmps over the l\nthe lazy dog\n", "4\ncdefghi\nefghijk\nefghijx\nabcdefg\n"], "outputs": ["The quick brown fox jumps over the lazy dog.\n", "AMBIGUOUS"]}

@@ -1,0 +1,1 @@
+{"inputs": ["3 3\nxx.\nxxx\n...\n", "4 6\nxx....\nxx.xxx\n...xxx\n...xxx\n"], "outputs": ["1 1 2\n2 3 1\n", "1 1 2\n2 4 3"]}

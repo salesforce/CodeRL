@@ -1,0 +1,1 @@
+{"inputs": ["x\n", "yxyxy\n", "xxxxxy\n"], "outputs": ["x\n", "y\n", "xxxx\n"]}

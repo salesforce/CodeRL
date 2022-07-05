@@ -1,0 +1,1 @@
+{"inputs": ["9\npergament\npermanent\n", "6\nwookie\ncookie\n", "4\npetr\negor\n", "6\ndouble\nbundle\n"], "outputs": ["1\n4 6\n", "1\n-1 -1\n", "2\n1 2\n", "2\n4 1\n"]}

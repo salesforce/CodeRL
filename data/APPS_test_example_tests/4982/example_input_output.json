@@ -1,0 +1,1 @@
+{"inputs": ["buy 1 15\nsplit 3\nsell 1 5\ndie 4\n"], "outputs": ["8.00000000"]}

@@ -1,0 +1,1 @@
+{"inputs": ["4\n>= 1 Y\n< 3 N\n<= -3 N\n> 55 N\n", "2\n> 100 Y\n< -100 Y\n"], "outputs": ["17\n", "Impossible"]}

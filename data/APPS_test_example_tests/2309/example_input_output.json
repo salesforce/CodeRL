@@ -1,0 +1,1 @@
+{"inputs": ["14\nwow\nthis\nis\nthe\nfirst\nmcdics\ncodeforces\nround\nhooray\ni\nam\nproud\nabout\nthat\n", "7\narsijo\nsuggested\nthe\nidea\nfor\nthis\nproblem\n", "4\nsame\nsame\nsame\ndiffer\n"], "outputs": ["3\nabout proud\nhooray round\nwow first\nthis is\ni that\nmcdics am\n", "0\n", "1\nsame differ\nsame same\n"]}

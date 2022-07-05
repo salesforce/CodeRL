@@ -1,0 +1,1 @@
+{"inputs": ["3 1\n1 2 1\n", "3 1\n2 2 1\n", "6 3\n5 20 12 7 14 101\n"], "outputs": ["Stannis\n", "Daenerys\n", "Stannis\n"]}

@@ -1,0 +1,1 @@
+{"inputs": ["2 16\nHot cross buns! = Hot cross buns! =\n4 4 4 4 4 4 4 4\nOne a pen- ny, Two a pen- ny, Hot cross buns! =\n2 2 2 2 2 2 2 2 4 4 4 4\n"], "outputs": ["Hot_cross_buns!_=___Hot_cross_buns!_=\n____________________Hot_cross_buns!_=\nOne_a_pen-_ny,_Two_a_pen-_ny,_Hot___cross____buns!_=\nHot___cross____buns!_=________One_a_pen-_ny,_Two_a_pen-_ny,"]}

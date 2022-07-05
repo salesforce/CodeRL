@@ -1,0 +1,1 @@
+{"inputs": ["stairs\n2\nerres airs ears ares aires\neet eat\n2\napples and pears\nplates of meat\n", "drought\n2\naught ought aut acht\nought oubt outte out oute\n5\ntasty sprout\ndifficult route\nworried and fraught\nforever in doubt\napples and pears\n"], "outputs": ["YES\nNO\n", "YES\nYES\nYES\nYES\nNO"]}

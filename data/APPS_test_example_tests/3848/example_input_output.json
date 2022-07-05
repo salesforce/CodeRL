@@ -1,0 +1,1 @@
+{"inputs": ["3 3\ncba\n", "3 4\ncba\n", "4 4\nabcd\n"], "outputs": ["NO\n", "cbd\n", "abda\n"]}

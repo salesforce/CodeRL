@@ -1,0 +1,1 @@
+{"inputs": ["37\n_Hello_Vasya(and_Petya)__bye_(and_OK)\n", "37\n_a_(_b___c)__de_f(g_)__h__i(j_k_l)m__\n", "27\n(LoooonG)__shOrt__(LoooonG)\n", "5\n(___)\n"], "outputs": ["5 4\n", "2 6\n", "5 2\n", "0 0\n"]}

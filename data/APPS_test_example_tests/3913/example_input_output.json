@@ -1,0 +1,1 @@
+{"inputs": ["4\na**d\n2\nabcd\nacbd\n", "5\nlo*er\n2\nlover\nloser\n", "3\na*a\n2\naaa\naba\n"], "outputs": ["2\n", "0\n", "1\n"]}

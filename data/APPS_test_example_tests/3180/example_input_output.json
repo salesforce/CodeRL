@@ -1,0 +1,1 @@
+{"inputs": ["4 3 2\nPAINT 2 0 0 3 3\nPAINT 3 0 3 3 3\n", "3 3 4\nPAINT 3 0 0 1 1\nSAVE\nPAINT 2 1 1 2 2\nLOAD 1\n"], "outputs": ["2 1 2 3\n1 2 1 2\n2 1 2 3\n1 2 1 2\n", "3 1 1\n1 3 1\n1 1 1"]}

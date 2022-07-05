@@ -1,0 +1,1 @@
+{"inputs": ["4\njorge\njose\noscar\njerry\n", "7\nkambei\ngorobei\nshichiroji\nkyuzo\nheihachi\nkatsushiro\nkikuchiyo\n", "5\nmike\nmike\nmike\nmike\nmike\n"], "outputs": ["1\n", "2\n", "4\n"]}

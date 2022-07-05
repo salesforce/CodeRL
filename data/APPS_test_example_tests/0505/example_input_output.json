@@ -1,0 +1,1 @@
+{"inputs": ["2 3 2\n.**\nX..\n", "5 6 14\n..***.\n*...X.\n..*...\n..*.**\n....*.\n", "3 3 4\n***\n*X*\n***\n"], "outputs": ["RL\n", "DLDDLLLRRRUURU\n", "IMPOSSIBLE\n"]}

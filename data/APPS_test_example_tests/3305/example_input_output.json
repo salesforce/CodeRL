@@ -1,0 +1,1 @@
+{"inputs": ["9 3\nbeginning\n1 5\n4 8\n1 9\n", "6 1\nvelvet\n1 6\n"], "outputs": ["5\n11\n16\n", "7"]}

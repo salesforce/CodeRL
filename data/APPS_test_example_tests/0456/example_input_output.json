@@ -1,0 +1,1 @@
+{"inputs": ["7\naogogob\n", "13\nogogmgogogogo\n", "9\nogoogoogo\n"], "outputs": ["a***b\n", "***gmg***\n", "*********\n"]}

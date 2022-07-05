@@ -1,0 +1,1 @@
+{"inputs": ["1 1\n0\n7\nt 0\nt 1\nt 2\nt 3\nt 4\nt 5\nt 6\n", "3 0\n2 6 6\n10\nt 1\nt 2\nt 3\nt 4\nt 5\nt 6\nt 7\nt 8\nt 9\nt 10\n"], "outputs": ["0\n1\n3\n2\n3\n5\n3\n", "11\n6\n5\n9\n4\n3\n7\n9\n9\n10"]}

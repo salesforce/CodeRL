@@ -1,0 +1,1 @@
+{"inputs": ["5 1\nBGGBG\n", "5 2\nBGGBG\n", "4 1\nGGGB\n"], "outputs": ["GBGGB\n", "GGBGB\n", "GGGB"]}

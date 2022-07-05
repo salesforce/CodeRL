@@ -1,0 +1,1 @@
+{"inputs": ["test\nwest\n", "codeforces\nyes\n", "test\nyes\n", "b\nab\n"], "outputs": ["2\n", "9\n", "7\n", "1\n"]}

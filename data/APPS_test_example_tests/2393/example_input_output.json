@@ -1,0 +1,1 @@
+{"inputs": ["4\nonetwone\ntestme\noneoneone\ntwotwo\n", "10\nonetwonetwooneooonetwooo\ntwo\none\ntwooooo\nttttwo\nttwwoo\nooone\nonnne\noneeeee\noneeeeeeetwooooo\n"], "outputs": ["2\n6 3\n0\n", "6\n18 11 12 1 6 21 \n1\n1 \n1\n3 \n1\n2 \n1\n6 \n0\n"]}

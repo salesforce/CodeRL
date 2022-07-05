@@ -1,0 +1,1 @@
+{"inputs": ["4 2\n3 3 3 2\n", "2 10\n0 100\n"], "outputs": ["It hadn't snowed this early in 3 years!\n", "It hadn't snowed this early in 0 years!"]}

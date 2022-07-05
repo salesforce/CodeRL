@@ -1,0 +1,1 @@
+{"inputs": ["3\nblue pink 1.0\nred pink 1.5\nblue red 1.0\n", "2\nblue red 1.0\nred pink 1.5\n", "4\norange pink 1.9\nyellow orange 1.9\ngreen yellow 1.9\nblue green 1.9\n"], "outputs": ["1.500000000000000\n", "0.000000000000000\n", "10.000000000000000"]}

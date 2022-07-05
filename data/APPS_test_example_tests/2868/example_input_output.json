@@ -1,0 +1,1 @@
+{"inputs": ["4\nacefdb\n", "1000\naaaaaa\n"], "outputs": ["abcdef\n", "aaaaaa"]}

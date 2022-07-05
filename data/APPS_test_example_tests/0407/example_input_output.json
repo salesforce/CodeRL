@@ -1,0 +1,1 @@
+{"inputs": ["3\nab\nde\naj\n", "5\nabcdef\nghij\nbdef\naccbd\ng\n", "3\naa\njj\naa\n"], "outputs": ["47\n", "136542\n", "44\n"]}

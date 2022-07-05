@@ -1,0 +1,1 @@
+{"inputs": ["6\nto be or not to be\n", "10\na ab a a b ab a a b c\n", "6\naa bb aa aa bb bb\n"], "outputs": ["12\n", "13\n", "11\n"]}

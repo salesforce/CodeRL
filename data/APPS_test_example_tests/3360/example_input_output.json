@@ -1,0 +1,1 @@
+{"inputs": ["5\nS -> aSa\nS -> bSb\nS -> a\nS -> b\nS -> \nwhere are the abaaba palindromes on this line\nnone on this line\nhow about this aaaaaaabbbbbbbbbbbbbbbbba\neven a single a or b is a palindrome\n"], "outputs": ["abaaba\nNONE\nabbbbbbbbbbbbbbbbba\na"]}

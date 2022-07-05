@@ -1,0 +1,1 @@
+{"inputs": ["5\na\nabcdfdcecba\nabbaxyzyx\ncodeforces\nacbba\n"], "outputs": ["a\nabcdfdcba\nxyzyx\nc\nabba\n"]}

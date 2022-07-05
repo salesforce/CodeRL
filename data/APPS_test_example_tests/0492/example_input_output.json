@@ -1,0 +1,1 @@
+{"inputs": ["^ >\n1\n", "< ^\n3\n", "^ v\n6\n"], "outputs": ["cw\n", "ccw\n", "undefined"]}

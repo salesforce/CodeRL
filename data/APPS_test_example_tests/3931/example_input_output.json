@@ -1,0 +1,1 @@
+{"inputs": ["3 5 3 1 8\nBerBank University\nUniversity BerMall\nUniversity BerBank\n", "4 2 1 300 1000\na A\nA aa\naa AA\nAA a\n"], "outputs": ["11\n", "5\n"]}

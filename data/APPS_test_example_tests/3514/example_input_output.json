@@ -1,0 +1,1 @@
+{"inputs": ["The first line of input consists of two space-separated integers $R$ and $C$ ($1 \\le R, C \\le 2000$).\n", "3 3\nx..\n.x.\nx.x\n"], "outputs": ["Print, on a single line, the maximum number of buildings that can be disarmed.\n", "2"]}

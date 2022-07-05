@@ -1,0 +1,1 @@
+{"inputs": ["2 3\nATK 2000\nDEF 1700\n2500\n2500\n2500\n", "3 4\nATK 10\nATK 100\nATK 1000\n1\n11\n101\n1001\n", "2 4\nDEF 0\nATK 0\n0\n0\n1\n1\n"], "outputs": ["3000\n", "992\n", "1\n"]}

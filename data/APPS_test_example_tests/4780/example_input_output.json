@@ -1,0 +1,1 @@
+{"inputs": ["3 3\nABC\nDEF\n0\n", "3 3\nABC\nDEF\n2\n"], "outputs": ["CBADEF\n", "CDBEAF"]}

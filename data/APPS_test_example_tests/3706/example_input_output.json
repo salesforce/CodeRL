@@ -1,0 +1,1 @@
+{"inputs": ["3 5\n2 2 2 3 2\n0 0 0 1 0\n1 1 1 2 1\n", "3 3\n0 0 0\n0 1 0\n0 0 0\n", "3 3\n1 1 1\n1 1 1\n1 1 1\n"], "outputs": ["4\nrow 1\nrow 1\ncol 4\nrow 3\n", "-1\n", "3\nrow 1\nrow 2\nrow 3\n"]}

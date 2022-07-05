@@ -1,0 +1,1 @@
+{"inputs": ["4\nXOOO\nXXOO\nOOOO\nXXXX\nXOOO\nXOOO\nXOXO\nXOXX\n", "2\nXX\nOO\nXO\nOX\n"], "outputs": ["Yes\n", "No\n"]}

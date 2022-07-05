@@ -1,0 +1,1 @@
+{"inputs": ["A.VFleaKing_is_the_author_of_this_problem\nB.Picks_is_the_author_of_this_problem\nC.Picking_is_the_author_of_this_problem\nD.Ftiasch_is_cute\n", "A.ab\nB.abcde\nC.ab\nD.abc\n", "A.c\nB.cc\nC.c\nD.c\n"], "outputs": ["D\n", "C\n", "B\n"]}

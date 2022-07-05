@@ -1,0 +1,1 @@
+{"inputs": ["5 0 0 1 1\nSESNW\n", "10 5 3 3 6\nNENSWESNEE\n"], "outputs": ["4\n", "-1\n"]}

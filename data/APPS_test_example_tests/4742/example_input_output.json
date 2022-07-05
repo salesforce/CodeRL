@@ -1,0 +1,1 @@
+{"inputs": ["3\nC E G\nD F# A\n", "7\nC C G G A A G\nC C F F D# D# F\n", "7\nA B C D E F G\nG F E D C B A\n"], "outputs": ["Transposition\n", "Inversion\n", "Retrograde"]}

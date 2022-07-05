@@ -1,0 +1,1 @@
+{"inputs": ["{abc,ono,sto}\n", "{}\n", "{znakovi}\n"], "outputs": ["{\n  abc,\n  ono,\n  sto\n}\n", "{\n}\n", "{\n  znakovi\n}"]}

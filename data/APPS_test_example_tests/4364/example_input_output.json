@@ -1,0 +1,1 @@
+{"inputs": ["S\n", "1905\n"], "outputs": ["Print the specified string: YYMM, MMYY, AMBIGUOUS or NA.\n", "YYMM\n"]}

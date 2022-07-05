@@ -1,0 +1,1 @@
+{"inputs": ["3 3\n3 2 1\n1 2 3\n", "3 3\n1 1 1\n1 1 1\n", "3 3\n1 2 1\n3 3 3\n"], "outputs": ["Possible\n3 2 1 \n", "Ambiguity\n", "Impossible\n"]}

@@ -1,0 +1,1 @@
+{"inputs": ["0001\n1011\n", "000\n111\n"], "outputs": ["0011\n", "impossible\n"]}

@@ -1,0 +1,1 @@
+{"inputs": ["1\n4 +zucchini +mozzarella +mushrooms -artichoke\n"], "outputs": ["zucchini\nmozzarella\nmushrooms\nartichoke"]}

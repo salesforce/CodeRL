@@ -1,0 +1,1 @@
+{"inputs": ["4\n12 12 8 10 5 11\n12 12 8 4 14 21\n12 12 8 12 20 8\n4 14 21 10 5 21\n", "4\n1 1 1 2 2 2\n2 2 2 1 5 5\n9 4 4 9 4 2\n9 4 4 9 9 4\n", "3\n50 50 50 100 100 100\n100 100 100 50 50 90\n50 50 90 50 50 50\n"], "outputs": ["No true closed chains\nFloor closed chains\n", "No true closed chains\nNo floor closed chains\n", "True closed chains\nNo floor closed chains"]}

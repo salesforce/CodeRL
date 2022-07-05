@@ -1,0 +1,1 @@
+{"inputs": ["3\nUptown Midtown\nMidtown Uptown Downtown\nDowntown Midtown\nUptown Downtown\n", "6\nA B\nB A D\nC D\nE D F G\nF E\nG E\nF A\n"], "outputs": ["Uptown Midtown Downtown\n", "F E D B A"]}

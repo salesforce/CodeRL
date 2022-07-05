@@ -1,0 +1,1 @@
+{"inputs": ["13\n0 B\n1 B\n2 E a\n2 E b\n2 S\n5 G a\n5 T a\n5 E a\n5 E b\n1 S\n10 E a\n10 G b\n1 T a\n", "6\n0 B\n1 B\n1 T a\n2 E a\n2 S\n5 T a\n"], "outputs": ["2\n3 c\n6 c\n", "1\n6 b"]}

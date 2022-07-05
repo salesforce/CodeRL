@@ -1,0 +1,1 @@
+{"inputs": ["3\na???cb\na??bbc\na?b?c\n"], "outputs": ["ababcb\n-1\nacbac\n"]}

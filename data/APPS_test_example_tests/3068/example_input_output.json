@@ -1,0 +1,1 @@
+{"inputs": ["0\n", "3\nAB 1 1\nAC 2 1\nBC 2 1\n"], "outputs": ["2600\n", "506"]}

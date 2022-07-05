@@ -1,0 +1,1 @@
+{"inputs": ["10 3 4\ncodeforces\nfor\n1 3\n3 10\n5 6\n5 7\n", "15 2 3\nabacabadabacaba\nba\n1 15\n3 4\n2 14\n", "3 5 2\naaa\nbaaab\n1 3\n1 1\n"], "outputs": ["0\n1\n0\n1\n", "4\n0\n3\n", "0\n0\n"]}

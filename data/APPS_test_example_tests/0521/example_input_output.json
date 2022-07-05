@@ -1,0 +1,1 @@
+{"inputs": ["5\nCY??Y\n", "5\nC?C?Y\n", "5\n?CYC?\n", "5\nC??MM\n", "3\nMMY\n"], "outputs": ["Yes\n", "Yes\n", "Yes\n", "No\n", "No\n"]}

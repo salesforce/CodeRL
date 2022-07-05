@@ -1,0 +1,1 @@
+{"inputs": ["........\n........\n........\n...CC...\n..C.DC..\n.C..C...\nC.IC....\nT.C.....\n", "........\n........\n........\n...CC...\n..CIDC..\n.CI.C...\nC.IC....\nT.C.....\n", "........\n........\n........\n...CCD..\n..C..C..\n.C..I...\nC.IC....\nT.C.....\n"], "outputs": ["FLFRXFLFRFLFRF\n", "FLFRXFLXFRFLXFRF\n", "FLFRXFLFRFXFFFLFFLF"]}

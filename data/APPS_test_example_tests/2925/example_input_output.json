@@ -1,0 +1,1 @@
+{"inputs": ["4 2\n30 one\n30 two\n15 three\n25 four\n"], "outputs": ["four\ntwo"]}

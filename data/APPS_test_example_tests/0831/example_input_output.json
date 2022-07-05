@@ -1,0 +1,1 @@
+{"inputs": ["bbaze\n3\nbzb 2\naeb 3\nba 10\n", "abacaba\n4\naba 2\nbcc 1\ncaa 2\nbbb 5\n", "xyz\n4\naxx 8\nza 1\nefg 4\nt 1\n"], "outputs": ["8\n", "18\n", "-1\n"]}

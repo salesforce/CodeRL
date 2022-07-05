@@ -1,0 +1,1 @@
+{"inputs": ["\"RUn.exe O\" \"\" \"   2ne, \" two! . \" \"\n", "   firstarg   second   \"\"    \n"], "outputs": ["<RUn.exe O>\n<>\n<   2ne, >\n<two!>\n<.>\n< >\n", "<firstarg>\n<second>\n<>"]}

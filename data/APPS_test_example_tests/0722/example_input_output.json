@@ -1,0 +1,1 @@
+{"inputs": ["5\nIAO'15\nIAO'2015\nIAO'1\nIAO'9\nIAO'0\n", "4\nIAO'9\nIAO'99\nIAO'999\nIAO'9999\n"], "outputs": ["2015\n12015\n1991\n1989\n1990\n", "1989\n1999\n2999\n9999"]}

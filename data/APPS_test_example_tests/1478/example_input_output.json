@@ -1,0 +1,1 @@
+{"inputs": ["hello,2,ok,0,bye,0,test,0,one,1,two,2,a,0,b,0\n", "a,5,A,0,a,0,A,0,a,0,A,0\n", "A,3,B,2,C,0,D,1,E,0,F,1,G,0,H,1,I,1,J,0,K,1,L,0,M,2,N,0,O,1,P,0\n"], "outputs": ["3\nhello test one \nok bye two \na b \n", "2\na \nA a A a A \n", "4\nA K M \nB F H L N O \nC D G I P \nE J \n"]}

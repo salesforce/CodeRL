@@ -1,0 +1,1 @@
+{"inputs": ["8\nAG?C??CT\n", "4\nAGCT\n", "6\n????G?\n", "4\nAA??\n"], "outputs": ["AGACGTCT\n", "AGCT\n", "===\n", "===\n"]}

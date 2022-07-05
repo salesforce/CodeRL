@@ -1,0 +1,1 @@
+{"inputs": ["5\nMisha ILoveCodeforces\nVasya Petrov\nPetrov VasyaPetrov123\nILoveCodeforces MikeMirzayanov\nPetya Ivanov\n"], "outputs": ["3\nPetya Ivanov\nMisha MikeMirzayanov\nVasya VasyaPetrov123"]}

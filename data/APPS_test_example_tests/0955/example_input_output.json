@@ -1,0 +1,1 @@
+{"inputs": ["4\n5 C\n6 B\n16 BAC\n4 A\n", "2\n10 AB\n15 BA\n", "5\n10 A\n9 BC\n11 CA\n4 A\n5 B\n", "6\n100 A\n355 BCA\n150 BC\n160 AC\n180 B\n190 CA\n", "2\n5 BA\n11 CB\n"], "outputs": ["15\n", "-1\n", "13\n", "250\n", "16\n"]}

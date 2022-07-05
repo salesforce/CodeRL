@@ -1,0 +1,1 @@
+{"inputs": ["s = \"barfoothefoobarman\",\nwords = [\"foo\",\"bar\"]\n", "s = \"wordgoodstudentgoodword\",\nwords = [\"word\",\"student\"]\n"], "outputs": [" [0,9]\nExplanation: Substrings starting at index 0 and 9 are \"barfoor\" and \"foobar\" respectively.\nThe output order does not matter, returning [9,0] is fine too.\n", " []"]}

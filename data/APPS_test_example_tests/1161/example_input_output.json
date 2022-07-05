@@ -1,0 +1,1 @@
+{"inputs": ["[<}){}\n", "{()}[]\n", "]]\n"], "outputs": ["2\n", "0\n", "Impossible"]}

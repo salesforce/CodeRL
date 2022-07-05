@@ -1,0 +1,1 @@
+{"inputs": ["4 4 4\n3\n2 green\n18 yellow\n34 red\n5 green\n", "4 4 4\n4\n2 green\n6 yellow\n10 red\n14 green\n4 red\n"], "outputs": ["0.25\n", "0"]}

@@ -1,0 +1,1 @@
+{"inputs": ["6\nxxxiii\n", "5\nxxoxx\n", "10\nxxxxxxxxxx\n"], "outputs": ["1\n", "0\n", "8\n"]}

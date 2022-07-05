@@ -1,0 +1,1 @@
+{"inputs": ["3 5\ndamir\nmarko\ndarko\n45\n", "3 5\ndamir\nmarko\ndarko\n90\n"], "outputs": ["  d\n m a\nd a m\n a r i\n  r k r\n   k o\n    o\n", "dmd\naaa\nrrm\nkki\noor"]}

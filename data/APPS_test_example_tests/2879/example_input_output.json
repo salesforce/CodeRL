@@ -1,0 +1,1 @@
+{"inputs": ["3 7\n.XXXXX.\n.XX..X.\nXXXX...\n", "1 3\nXXX\n"], "outputs": ["No solution\n", "123"]}

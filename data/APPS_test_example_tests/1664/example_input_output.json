@@ -1,0 +1,1 @@
+{"inputs": ["4\nc=aa#bb\nd12=c\nres=c^d12\ntmp=aa$c\n", "2\nmax=aaaa$bbbb\nmin=bbbb^aaaa\n"], "outputs": ["2\naaaa=aa#bb\nres=aaaa^aaaa\n", "0"]}

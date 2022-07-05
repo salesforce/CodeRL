@@ -1,0 +1,1 @@
+{"inputs": ["3 3 2\nYYY\nNNN\nYNY\n", "4 4 1\nNNNY\nNNYN\nNYNN\nYNNN\n"], "outputs": ["2\n", "4"]}

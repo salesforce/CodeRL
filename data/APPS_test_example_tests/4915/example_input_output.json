@@ -1,0 +1,1 @@
+{"inputs": ["3 E right\n10 A wrong\n30 C wrong\n50 B wrong\n100 A wrong\n200 A right\n250 C wrong\n300 D right\n-1\n"], "outputs": ["3 543"]}

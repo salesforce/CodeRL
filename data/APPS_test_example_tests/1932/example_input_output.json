@@ -1,0 +1,1 @@
+{"inputs": ["4\nIcosahedron\nCube\nTetrahedron\nDodecahedron\n", "3\nDodecahedron\nOctahedron\nOctahedron\n"], "outputs": ["42\n", "28\n"]}

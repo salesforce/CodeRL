@@ -1,0 +1,1 @@
+{"inputs": ["7\nals mollen mollen mollen mollen mollen mollen\n4\nals when correct\nmollen moles correct\nmollen destroy correct\nmollen mills incorrect\n"], "outputs": ["64 correct\n665 incorrect"]}

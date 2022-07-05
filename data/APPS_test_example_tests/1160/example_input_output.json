@@ -1,0 +1,1 @@
+{"inputs": ["0 1 0 1 1 0\n3\nXL\nS,M\nXL,XXL\n", "1 1 2 0 1 1\n5\nS\nM\nS,M\nXXL,XXXL\nXL,XXL\n"], "outputs": ["YES\nXL\nM\nXXL\n", "NO"]}

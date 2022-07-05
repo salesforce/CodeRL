@@ -1,0 +1,1 @@
+{"inputs": ["2 5\n3 1 2 3\n3 3 4 5\n", "10 10\n1 1\n1 2\n1 3\n1 4\n1 5\n1 6\n1 7\n1 8\n1 9\n1 10\n"], "outputs": ["possible\n", "impossible\n"]}

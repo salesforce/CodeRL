@@ -1,0 +1,1 @@
+{"inputs": ["abacaba\n5\n2 1 4\n1 4 b\n1 5 b\n2 4 6\n2 1 7\n", "dfcbbcfeeedbaea\n15\n1 6 e\n1 4 b\n2 6 14\n1 7 b\n1 12 c\n2 6 8\n2 1 6\n1 7 c\n1 2 f\n1 10 a\n2 7 9\n1 10 a\n1 14 b\n1 1 f\n2 1 11\n"], "outputs": ["3\n1\n2\n", "5\n2\n5\n2\n6"]}
