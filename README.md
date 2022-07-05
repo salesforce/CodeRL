@@ -8,7 +8,7 @@
 This is the official code for the paper **CodeRL: Mastering Code Generation through Pretrained Models and Deep Reinforcement Learning**.  
 
 Authors:
-Hung Le, Yue Wang, Akhilesh Deepak Gotmare, Silvio Savarese, Steven C.H. Hoi 
+[Hung Le](https://sites.google.com/view/henryle2018/home), [Yue Wang](https://yuewang-cuhk.github.io/), [Akhilesh Deepak Gotmare](https://akhileshgotmare.github.io/), [Silvio Savarese](https://scholar.google.com/citations?user=ImpbxLsAAAAJ&hl=en), [Steven C.H. Hoi](https://scholar.google.com/citations?user=JoLjflYAAAAJ&hl=en) 
 
 <p align="center">
 <img src="images/ezgif-1-12f629284e.gif" width="100%" />
