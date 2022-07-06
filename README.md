@@ -5,7 +5,7 @@
 ## CodeRL: Mastering Code Generation through Pretrained Models and Deep Reinforcement Learning <a name="corl"></a>
 
 
-This is the official code for the paper **CodeRL: Mastering Code Generation through Pretrained Models and Deep Reinforcement Learning**.  
+This is the official code for the paper **[CodeRL: Mastering Code Generation through Pretrained Models and Deep Reinforcement Learning](https://arxiv.org/abs/2207.01780)**.  
 
 Authors:
 [Hung Le](https://sites.google.com/view/henryle2018/home), [Yue Wang](https://yuewang-cuhk.github.io/), [Akhilesh Deepak Gotmare](https://akhileshgotmare.github.io/), [Silvio Savarese](https://scholar.google.com/citations?user=ImpbxLsAAAAJ&hl=en), [Steven C.H. Hoi](https://scholar.google.com/citations?user=JoLjflYAAAAJ&hl=en) 
@@ -26,7 +26,7 @@ Authors:
 	* [x] [Evaluating Programs](###evaluate)
 	* [ ] [Generating Programs with Critic Sampling](###criticsampling)
 * [x] [Example Generated Programs](##exampleprogram)
-* [ ] [Citation](##cite)
+* [x] [Citation](##cite)
 * [x] [License](#license) 
 
 ## Overview  <a name="coderl"></a>
@@ -158,7 +158,12 @@ The problem is from the APPS benchmark, and the solution programs are generated 
 
 If you find the paper or the source code useful to your projects, please cite the following bibtex: 
 <pre>
-TBA
+@article{coderl2022,
+  title={CodeRL: Mastering Code Generation through Pretrained Models and Deep Reinforcement Learning},
+  author={Le, Hung and Wang, Yue and Gotmare, Akhilesh Deepak and Savarese, Silvio and Hoi, Steven C. H.},
+  journal={arXiv preprint arXiv:2207.01780},
+  year={2022}
+}
 </pre>
 
 
