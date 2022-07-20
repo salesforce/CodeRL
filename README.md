@@ -67,7 +67,8 @@ The code requires some dependencies as specified in `requirements.txt`. Please f
 ## Datasets <a name="datasets"></a>
 
 For pretraining, we use the [Python Github Code Dataset (GCPY)](https://huggingface.co/datasets/lvwerra/github-code). 
-We filter the dataset by keeping only the code with licenses that at least permit academic use (“mit”, “apache-2”, “bsd-3-clause”, “bsd-2- 126 clause”, “cc0-1.0”, “unlicense”, “isc”). Please see the paper for more details on pretraining data preprocessing and pretraining. 
+We have compiled public, non-personal data from GitHub consisting of permissively licensed Python code (e.g. “mit”, “apache-2”, “bsd-3-clause”, “bsd-2- 126 clause”, “cc0-1.0”, “unlicense”, “isc”). Please see the paper for more details on pretraining data preprocessing and pretraining. 
+
 
 After pretraining, we finetune/evaluate models on the following major program synthesis benchmarks: 
 
