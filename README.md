@@ -24,6 +24,7 @@ Authors:
 	* [x] [Generating Programs](###generate)
 	* [x] [Running Unit Tests](###runtests)
 	* [x] [Evaluating Programs](###evaluate)
+	* [x] [Training Critic](###trainingcritic)
 	* [ ] [Generating Programs with Critic Sampling](###criticsampling)
 * [x] [Example Generated Programs](##exampleprogram)
 * [x] [Citation](##cite)
@@ -63,6 +64,14 @@ programs are refined and repaired based on their results on example unit tests o
 The code requires some dependencies as specified in `requirements.txt`. Please follow the relevant libraries to install or run: 
 
 `pip install -r requirements.txt`
+
+Install the `transformers` library from the source code (the current source code is developed from the original [code](https://github.com/huggingface/transformers) of version 4.16.1): 
+
+```
+cd transformers
+pip install -e .
+```
+
 
 ## Datasets <a name="datasets"></a>
 
@@ -114,7 +123,7 @@ We created `scripts/generate.sh` to generate programs on the APPS benchmark. You
 | `num_seqs_per_iter` | Depending on the limit of GPU, we can generate multiple rounds, each with this number of output programs | 50                             |
 | `temp`              | temperature for sampling generation                                                                      | 0.6                            ||
 
-Other parameters are defined in the file `utils/generate_config.py`.
+Other parameters are defined in the file `utils/generate_configs.py`.
 
 Running the generation script will output programs, each of which is saved into a `json` file, including data fields `code` (list of output programs) and `prompt` (constructed input sequence to the LM model).
 
@@ -146,10 +155,35 @@ Compared to the original implementation from APPS, we adopt one trick which will
 ### Evaluating Programs <a name="evaluate"></a>
 To compute the pass@k metrics, rather than using the APPS evaluation metrics, we follow the official implementation of the [HumanEval benchmark](https://github.com/openai/human-eval) (which better measures pass@k normalized by the number of possible k programs)
 
+
+### Training Critic <a name="trainingcritic"></a>
+
+We can train a critic model as a classifier that predicts the test outcomes of generated samples. For each training sample, we can follow the prior processes to generate programs and evaluate them with available unit tests. On average, we generate 20 programs per training sample (we provided some example generated programs in `data/APPS/train/`).
+
+Once the programs are tested, we can used their test outcomes as annotations to train a critic model initialized from a LM pretrained on source code data (we used CodeT5-based in this case). 
+
+We created `scripts/train_critic.sh` and `scripts/train_critic_deepspeed.sh` to train a critic using generated programs. You can directly run this file by configuring the following parameters:
+
+| **Parameters** |                                                                                **Description**                                                                               |                  **Example Values**                 |
+|:--------------:|:----------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|:---------------------------------------------------:|
+| `batch-size-per-replica`      | Number of training samples per GPU device                                                                                                                               | 8                                      |
+| `grad-acc-steps`    | Gradient accumulation steps                                                                                                                                            | 1                              |
+| `epochs`      | Number of training epochs                                                                                                                                             | 10                                    |
+| `lr`  | Learning rate                                        | 2e-5 |
+| `save-freq`          | Save model checkpoints after this number of training steps                                                                                                                                 | 1000                                                  |
+| `log-freq`            | Save model training losses after this number of training steps                                                                                                                                     | 10                                                |
+| `save_total_limit`        | Total number of checkpoints to keep eventually (only the latest ones are kept) | 5                                                  |
+| `fp16`        | Enable this to training model in 16-bit mode to reduce memory usage  | N/A                                                  |
+| `deepspeed`        | If using deepspeed, set this parameter to the configuration file for deepspeed training  | configs/deepspeed_configs.json                                                  |
+| `db`        | Enable this to train in debugging mode i.e. with small dummy data split and only 1 data worker  | N/A                                                  |
+
+Other parameters are defined in the file `utils/train_critic_configs.py`.
+
+Running the script will train a critic model as a classifier that receives inputs as a problem description + a generated program and returns an output as one of 4 test outcomes: compile error, runtime error, failed tests, and passed tests. The model checkpoints are saved in a folder under `exps/`. 
+
 ### Generating Programs with Critic Sampling <a name="criticsampling"></a>
 
 We will release the implementation details of our critic sampling procedure. 
-
 
 ## Example Generated Programs <a name="exampleprogram"></a>
 
