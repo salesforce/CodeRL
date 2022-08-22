@@ -15,22 +15,26 @@ Authors:
 </p>
 
 ### Contents:
-* [x] [CodeRL Overview](##coderl)
-* [x] [Installation](##install)
-* [x] [Datasets](##datasets)
-	* [x] [Example Unit Tests](###exampletests)
-* [ ] [Models](##models)
-* [ ] [Processes](##processes)  
-	* [x] [Generating Programs](###generate)
-	* [x] [Running Unit Tests](###runtests)
-	* [x] [Evaluating Programs](###evaluate)
-	* [x] [Training Critic](###trainingcritic)
-	* [ ] [Generating Programs with Critic Sampling](###criticsampling)
-* [x] [Example Generated Programs](##exampleprogram)
-* [x] [Citation](##cite)
+* [x] [CodeRL Overview](#coderl-overview)
+* [x] [Installation](#installation)
+* [x] [Datasets](#datasets)
+	* [x] [Example Unit Tests](#example-unit-tests)
+* [ ] [Models](#models)
+	* [x] CodeT5-large
+	* [x] CodeT5-large-ntp-py
+	* [ ] CodeRL+CodeT5 
+	* [ ] Critic models 
+* [ ] [Processes](#processes)  
+	* [x] [Generating Programs](#generating-programs)
+	* [x] [Running Unit Tests](#running-unit-tests)
+	* [x] [Evaluating Programs](#evaluating-programs)
+	* [x] [Training Critic](#training-critic)
+	* [ ] [Generating Programs with Critic Sampling](#generating-programs-with-critic-sampling)
+* [x] [Example Generated Programs](#example-generated-programs)
+* [x] [Citation](#citation)
 * [x] [License](#license) 
 
-## Overview  <a name="coderl"></a>
+## CodeRL Overview  
 
 
  <p align="center">
@@ -59,7 +63,7 @@ programs are refined and repaired based on their results on example unit tests o
 -->
 
 
-## Installation  <a name="install"></a>
+## Installation  
 
 The code requires some dependencies as specified in `requirements.txt`. Please follow the relevant libraries to install or run: 
 
@@ -73,7 +77,7 @@ pip install -e .
 ```
 
 
-## Datasets <a name="datasets"></a>
+## Datasets 
 
 For pretraining, apart from the [CodeSearchNet (CSN)](https://arxiv.org/abs/1909.09436), we use the [Python Github Code Dataset (GCPY)](https://huggingface.co/datasets/lvwerra/github-code). 
 We have compiled public, non-personal data from GitHub consisting of permissively licensed Python code (e.g. “mit”, “apache-2”, “bsd-3-clause”, “bsd-2- 126 clause”, “cc0-1.0”, “unlicense”, “isc”). Please see the paper for more details on pretraining data preprocessing and pretraining. 
@@ -88,12 +92,12 @@ On both benchmarks, we follow the same way of preprocessing data and constructin
 
 Download and unzip all files into the `data` folder.
 
-### Example Unit Tests <a name="exampletests"></a>
+### Example Unit Tests 
 In addition to the original hidden unit tests on APPS, we also utilize the example tests that are often embedded in problem descriptions.
 After downloading and unzipping APPS, you can run the notebook `extract_example_test.ipynb` to extract and save example unit tests of APPS test samples into corresponding sample folder e.g. `data/APPS/test/0000/`.
 We release the example unit tests that we already extracted using this notebook in the folder `data/APPS_test_example_tests/`. The average number of example unit tests per sample is 1.9764.
 
-## Models <a name="models"></a>
+## Models 
 
 We employ [CodeT5](https://github.com/salesforce/CodeT5) (a family of encoder-decoder language models for code from the [paper](https://arxiv.org/pdf/2109.00859.pdf)) as the foundation model for CodeRL. We release two large-sized CodeT5 checkpoints at Hugging Face: [Salesforce/codet5-large](https://huggingface.co/Salesforce/codet5-large) and [Salesforce/codet5-large-ntp-py](https://huggingface.co/Salesforce/codet5-large-ntp-py).
 * CodeT5-large was pretrained using Masked Span Prediction objective on CSN and achieved new SOTA results on several CodeXGLUE benchmarks. See Appendix A.1 of the [paper](https://arxiv.org/pdf/2207.01780.pdf) for more details.
@@ -106,9 +110,9 @@ We will release the following finetuned model checkpoints:
 
 Download all files into the `models` folder.
 
-## Processes <a name="processes"></a>
+## Processes 
 
-### Generating Programs <a name="generate"></a>
+### Generating Programs 
 
 We created `scripts/generate.sh` to generate programs on the APPS benchmark. You can directly run this file by configuring the following parameters: 
 
@@ -128,7 +132,7 @@ Other parameters are defined in the file `utils/generate_configs.py`.
 Running the generation script will output programs, each of which is saved into a `json` file, including data fields `code` (list of output programs) and `prompt` (constructed input sequence to the LM model).
 
 
-### Running Unit Tests  <a name="runtests"></a>
+### Running Unit Tests 
 
 Once the programs are generated, they are evaluated against the corresponding unseen unit tests in each problem. 
 
@@ -152,11 +156,11 @@ Running the script will output test results for each program. For each test samp
 Compared to the original implementation from APPS, we adopt one trick which will exit the unit testing loop if a program does not pass any test case. This will speed up the testing process while the final passing rate measures are not affected. Refer to the `run_test` function in `utils/testing_utils.py` for more details. 
 
 
-### Evaluating Programs <a name="evaluate"></a>
+### Evaluating Programs 
 To compute the pass@k metrics, rather than using the APPS evaluation metrics, we follow the official implementation of the [HumanEval benchmark](https://github.com/openai/human-eval) (which better measures pass@k normalized by the number of possible k programs)
 
 
-### Training Critic <a name="trainingcritic"></a>
+### Training Critic 
 
 We can train a critic model as a classifier that predicts the test outcomes of generated samples. For each training sample, we can follow the prior processes to generate programs and evaluate them with available unit tests. On average, we generate 20 programs per training sample (we provided some example generated programs in `data/APPS/train/`).
 
@@ -181,18 +185,18 @@ Other parameters are defined in the file `utils/train_critic_configs.py`.
 
 Running the script will train a critic model as a classifier that receives inputs as a problem description + a generated program and returns an output as one of 4 test outcomes: compile error, runtime error, failed tests, and passed tests. The model checkpoints are saved in a folder under `exps/`. 
 
-### Generating Programs with Critic Sampling <a name="criticsampling"></a>
+### Generating Programs with Critic Sampling 
 
 We will release the implementation details of our critic sampling procedure. 
 
-## Example Generated Programs <a name="exampleprogram"></a>
+## Example Generated Programs 
 
 <p align="center">
 <img src="images/example_code.png" width="100%" />
 The problem is from the APPS benchmark, and the solution programs are generated by CodeT5 and CodeRL.
 </p>
 
-## Citation <a name="cite"></a>
+## Citation 
 
 If you find the paper or the source code useful to your projects, please cite the following bibtex: 
 <pre>
@@ -205,7 +209,7 @@ If you find the paper or the source code useful to your projects, please cite th
 </pre>
 
 
-## License <a name="license"></a>
+## License 
 
 The code is released under BSD 3-Clause - see `LICENSE.txt` for details.
 
