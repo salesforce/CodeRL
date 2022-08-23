@@ -195,6 +195,7 @@ We created `scripts/generate_critic_scores.sh` to generate critic scores for syn
 |:-----------------:|:--------------------------------------------------------------------------------------------------------:|:------------------------------:|
 | `critic_scores`        | Enable this to run inference on critic models and obtain critic scores                                                                    | N/A |
 | `gt_solutions`    | Enable this to run inference on ground-truth programs; else, synthetic programs are used by default                                  | N/A      |
+| `binary_prediction`    | Enable this to predict in binary classification i.e. passed tests or failed tests only                                  | N/A      |
 
 Other parameters are defined in the file `utils/generate_configs.py`.
 
