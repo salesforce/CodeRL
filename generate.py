@@ -79,9 +79,9 @@ def generate_critic_inputs(args, test_case_path, prompt_path, solutions_path, to
         all_codes.append(code)
         
         if gt_solutions: 
-            gt_errors.append(dsutils.get_error_type(True))
+            gt_errors.append(dsutils.get_error_type(True, binary=args.binary_prediction))
         else:
-            gt_errors.append(dsutils.get_error_type(solution['result']))
+            gt_errors.append(dsutils.get_error_type(solution['result'], binary=args.binary_prediction))
 
     return all_texts, all_codes, gt_errors
 
@@ -130,11 +130,13 @@ def main(args):
         
         problem_id = int(problem.split('/')[-1])
         
+        '''
         if args.critic_scores and \
             os.path.exists(os.path.join(args.output_path, f"{problem_id}_gt{args.gt_solutions}.pkl")):
             continue 
         elif os.path.exists(os.path.join(args.output_path, f"{problem_id}.json")):
             continue 
+        '''
         
         test_case_path = os.path.join(prob_path, "input_output.json")
         prompt_path = os.path.join(prob_path, "question.txt")
