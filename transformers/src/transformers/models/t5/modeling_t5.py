@@ -1542,6 +1542,7 @@ class T5ForConditionalGeneration(T5PreTrainedModel):
         output_hidden_states=None,
         return_dict=None,
         error_types=None,
+        return_error_hidden_states=False
     ):
         r"""
         labels (`torch.LongTensor` of shape `(batch_size,)`, *optional*):
@@ -1665,7 +1666,8 @@ class T5ForConditionalGeneration(T5PreTrainedModel):
             error_pred_loss_fct = CrossEntropyLoss()
             error_pred_loss =  error_pred_loss_fct(error_logits.view(-1, error_logits.size(-1)), error_types.view(-1))
             _, error_preds = torch.max(error_logits, dim=-1) 
-           
+            if return_error_hidden_states:
+                return error_pred_loss, error_preds, error_states 
             return error_pred_loss, error_preds
             
         if not return_dict:

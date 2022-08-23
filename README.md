@@ -29,6 +29,7 @@ Authors:
 	* [x] [Running Unit Tests](#running-unit-tests)
 	* [x] [Evaluating Programs](#evaluating-programs)
 	* [x] [Training Critic](#training-critic)
+	* [x] [Generating Critic Scores](#generating-critic-scores)
 	* [ ] [Generating Programs with Critic Sampling](#generating-programs-with-critic-sampling)
 * [x] [Example Generated Programs](#example-generated-programs)
 * [x] [Citation](#citation)
@@ -125,7 +126,8 @@ We created `scripts/generate.sh` to generate programs on the APPS benchmark. You
 | `end`               | end index of test samples to be generated                                                                | 5000                           |
 |`num_seqs`          | number of total output programs to be generated (for sampling generation)                                | 1000                           |
 | `num_seqs_per_iter` | Depending on the limit of GPU, we can generate multiple rounds, each with this number of output programs | 50                             |
-| `temp`              | temperature for sampling generation                                                                      | 0.6                            ||
+| `temp`              | temperature for sampling generation                                                                      | 0.6                            |
+| `output_path`              | Path to save generated programs                                                                      | outputs/codes/                            |
 
 Other parameters are defined in the file `utils/generate_configs.py`.
 
@@ -162,7 +164,7 @@ To compute the pass@k metrics, rather than using the APPS evaluation metrics, we
 
 ### Training Critic 
 
-We can train a critic model as a classifier that predicts the test outcomes of generated samples. For each training sample, we can follow the prior processes to generate programs and evaluate them with available unit tests. On average, we generate 20 programs per training sample (we provided some example generated programs in `data/APPS/train/`).
+We can train a critic model as a classifier that predicts the test outcomes of generated samples. For each training sample, we can follow the prior processes ([generating programs](#generating-programs) and [running unit tests](running-unit-tests)) to obtain synthetic samples and their annotations of unit test outcomes. On average, we generate 20 programs per training sample (we provided some example generated programs in `data/APPS/train/`).
 
 Once the programs are tested, we can used their test outcomes as annotations to train a critic model initialized from a LM pretrained on source code data (we used CodeT5-based in this case). 
 
@@ -184,6 +186,20 @@ We created `scripts/train_critic.sh` and `scripts/train_critic_deepspeed.sh` to 
 Other parameters are defined in the file `utils/train_critic_configs.py`.
 
 Running the script will train a critic model as a classifier that receives inputs as a problem description + a generated program and returns an output as one of 4 test outcomes: compile error, runtime error, failed tests, and passed tests. The model checkpoints are saved in a folder under `exps/`. 
+
+### Generating Critic Scores
+
+We created `scripts/generate_critic_scores.sh` to generate critic scores for synthetic programs. We use the same parameters as defined in [the generating program process](generating-programs) with the following additional parameters:   
+
+|   **Parameters**  |                                              **Description**                                             |       **Example Values**       |
+|:-----------------:|:--------------------------------------------------------------------------------------------------------:|:------------------------------:|
+| `critic_scores`        | Enable this to run inference on critic models and obtain critic scores                                                                    | N/A |
+| `gt_solutions`    | Enable this to run inference on ground-truth programs; else, synthetic programs are used by default                                  | N/A      |
+
+Other parameters are defined in the file `utils/generate_configs.py`.
+
+Running the generation script will output programs, each of which is saved into a `pkl` (pickle) file, including data fields `code` (list of programs), `prompt` (constructed input sequence to the critic model), `gt_error_type` (ground-truth test outcomes), `pred_error_type` (predicted test outcomes by critic), `error_hidden_states` (hidden states returned by critic). 
+
 
 ### Generating Programs with Critic Sampling 
 
