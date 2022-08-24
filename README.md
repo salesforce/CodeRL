@@ -23,7 +23,7 @@ Authors:
 	* [x] CodeT5-large
 	* [x] CodeT5-large-ntp-py
 	* [ ] CodeRL+CodeT5 
-	* [ ] Critic models 
+	* [x] Critic models 
 * [ ] [Processes](#processes)  
 	* [x] [Generating Programs](#generating-programs)
 	* [x] [Running Unit Tests](#running-unit-tests)
@@ -100,14 +100,21 @@ We release the example unit tests that we already extracted using this notebook 
 
 ## Models 
 
-We employ [CodeT5](https://github.com/salesforce/CodeT5) (a family of encoder-decoder language models for code from the [paper](https://arxiv.org/pdf/2109.00859.pdf)) as the foundation model for CodeRL. We release two large-sized CodeT5 checkpoints at Hugging Face: [Salesforce/codet5-large](https://huggingface.co/Salesforce/codet5-large) and [Salesforce/codet5-large-ntp-py](https://huggingface.co/Salesforce/codet5-large-ntp-py).
-* CodeT5-large was pretrained using Masked Span Prediction objective on CSN and achieved new SOTA results on several CodeXGLUE benchmarks. See Appendix A.1 of the [paper](https://arxiv.org/pdf/2207.01780.pdf) for more details.
-* CodeT5-large-ntp-py was first pretrained using Masked Span Prediction objective on CSN and GCPY, followed by using Next Token Prediction objective on GCPY. _This checkpoint was especially optimized for Python code generation tasks and employed by CodeRL_.
+We employ [CodeT5](https://github.com/salesforce/CodeT5) (a family of encoder-decoder language models for code from the [paper](https://arxiv.org/pdf/2109.00859.pdf)) as the foundation model in our work. 
 
-We will release the following finetuned model checkpoints: 
+We pretrained CodeT5 with bigger dataset and improved learning objectives. We release two large-sized CodeT5 checkpoints at Hugging Face: [Salesforce/codet5-large](https://huggingface.co/Salesforce/codet5-large) and [Salesforce/codet5-large-ntp-py](https://huggingface.co/Salesforce/codet5-large-ntp-py).
 
-* CodeRL+CodeT5: the above pretrained CodeT5 model which is finetuned on APPS following our CodeRL training framework 
-* Critic: a CodeT5 model which is initialized from a CodeT5-base and trained as a classifier to predict unit test outcomes. The critic is used to estimate returns and facilitate RL finetuning. 
+* [CodeT5-large](https://huggingface.co/Salesforce/codet5-large): a 770M-CodeT5 model which was pretrained using Masked Span Prediction objective on CSN and achieved new SOTA results on several CodeXGLUE benchmarks. See Appendix A.1 of the [paper](https://arxiv.org/pdf/2207.01780.pdf) for more details.
+* [CodeT5-large-ntp-py](https://huggingface.co/Salesforce/codet5-large-ntp-py): A 770M-CodeT5 model which was first pretrained using Masked Span Prediction objective on CSN and GCPY, followed by using Next Token Prediction objective on GCPY. _This checkpoint was especially optimized for Python code generation tasks and employed by CodeRL_.
+
+For finetuning on downstream code generation tasks on APPS, we adopted critic models for RL training. We released the following critic model checkpoints: 
+
+* [CodeT5-finetuned_critic](https://console.cloud.google.com/storage/browser/sfr-coderl-research/codet5_finetuned_critic): a CodeT5 model which is initialized from a normal CodeT5-base and trained as a classifier to predict unit test outcomes (one of Compile Error, Runtime Error, Failed Tests, and Passed Tests). The critic is used to estimate returns and facilitate RL finetuning.
+* [CodeT5-finetuned_critic_binary](https://console.cloud.google.com/storage/browser/sfr-coderl-research/codet5_finetuned_critic_binary): similar to the prior model but was trained with binary annotations (Passed Tests or not Passed Tests only). This critic is used to facilitate generation procedures during inference.
+
+We will release the following finetuned code generation model checkpoints: 
+
+* CodeRL+CodeT5: a CodeT5 model which was initialized from the prior pretrained CodeT5-large-ntp-py and then finetuned on APPS following our CodeRL training framework. 
 
 Download all files into the `models` folder.
 
