@@ -30,6 +30,8 @@ Authors:
 	* [x] [Evaluating Programs](#evaluating-programs)
 	* [x] [Training Critic](#training-critic)
 	* [x] [Generating Critic Scores](#generating-critic-scores)
+	* [x] [Finetuning with Ground-truth Programs](#finetuning-with-ground-truth-programs)
+	* [ ] [Finetuning with Generated Programs](#finetuning-with-generated-programs)
 	* [ ] [Generating Programs with Critic Sampling](#generating-programs-with-critic-sampling)
 * [x] [Example Generated Programs](#example-generated-programs)
 * [x] [Citation](#citation)
@@ -208,6 +210,18 @@ Other parameters are defined in the file `utils/generate_configs.py`.
 
 Running the generation script will output programs, each of which is saved into a `pkl` (pickle) file, including data fields `code` (list of programs), `prompt` (constructed input sequence to the critic model), `gt_error_type` (ground-truth test outcomes), `pred_error_type` (predicted test outcomes by critic), `error_hidden_states` (hidden states returned by critic). 
 
+### Finetuning with Ground-truth Programs
+
+We can finetune any pretraind language model as a program synthesis model that can generate code from problem description in natural language. In our approach, this stage of finetuning is a warmup stage using the ground-truth annotations (from APPS) before a further finetuning stage on synthetic/generated programs. 
+ 
+We created `scripts/train_actor.sh` and `scripts/train_actor_deepspeed.sh` which include the parameters as defined above in the [critic training process](training-critic). 
+
+Running the script will finetune a pretrained CodeT5-large model that receives a problem description as input and returns a corresponding solution program in Python. 
+The model checkpoints are saved in a folder under `exps/`. 
+
+### Finetuning with Generated Programs
+
+TBD
 
 ### Generating Programs with Critic Sampling 
 
