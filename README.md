@@ -190,7 +190,7 @@ We created `scripts/train_critic.sh` and `scripts/train_critic_deepspeed.sh` to 
 | `deepspeed`        | If using deepspeed, set this parameter to the configuration file for deepspeed training  | configs/deepspeed_configs.json                                                  |
 | `db`        | Enable this to train in debugging mode i.e. with small dummy data split and only 1 data worker  | N/A                                                  |
 
-Other parameters are defined in the file `utils/train_critic_configs.py`.
+Other parameters are defined in the file `utils/train_configs.py`.
 
 Running the script will train a critic model as a classifier that receives inputs as a problem description + a generated program and returns an output as one of 4 test outcomes: compile error, runtime error, failed tests, and passed tests. The model checkpoints are saved in a folder under `exps/`. 
 
