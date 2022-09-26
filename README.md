@@ -173,7 +173,7 @@ To compute the pass@k metrics, rather than using the APPS evaluation metrics, we
 
 ### Training Critic 
 
-We can train a critic model as a classifier that predicts the test outcomes of generated samples. For each training sample, we can follow the prior processes ([generating programs](#generating-programs) and [running unit tests](running-unit-tests)) to obtain synthetic samples and their annotations of unit test outcomes. On average, we generate 20 programs per training sample (we provided some example generated programs in `data/APPS/train/`).
+We can train a critic model as a classifier that predicts the test outcomes of generated samples. For each training sample, we can follow the prior processes ([generating programs](#generating-programs) and [running unit tests](#running-unit-tests)) to obtain synthetic samples and their annotations of unit test outcomes. On average, we generate 20 programs per training sample (we provided some example generated programs in `data/APPS/train/`).
 
 Once the programs are tested, we can used their test outcomes as annotations to train a critic model initialized from a LM pretrained on source code data (we used CodeT5-based in this case). 
 
@@ -198,7 +198,7 @@ Running the script will train a critic model as a classifier that receives input
 
 ### Generating Critic Scores
 
-We created `scripts/generate_critic_scores.sh` to generate critic scores for synthetic programs. We use the same parameters as defined in [the generating program process](generating-programs) with the following additional parameters:   
+We created `scripts/generate_critic_scores.sh` to generate critic scores for synthetic programs. We use the same parameters as defined in [the generating program process](#generating-programs) with the following additional parameters:   
 
 |   **Parameters**  |                                              **Description**                                             |       **Example Values**       |
 |:-----------------:|:--------------------------------------------------------------------------------------------------------:|:------------------------------:|
@@ -214,7 +214,7 @@ Running the generation script will output programs, each of which is saved into 
 
 We can finetune any pretraind language model as a program synthesis model that can generate code from problem description in natural language. In our approach, this stage of finetuning is a warmup stage using the ground-truth annotations (from APPS) before a further finetuning stage on synthetic/generated programs. 
  
-We created `scripts/train_actor.sh` and `scripts/train_actor_deepspeed.sh` which include the parameters as defined above in the [critic training process](training-critic). 
+We created `scripts/train_actor.sh` and `scripts/train_actor_deepspeed.sh` which include the parameters as defined above in the [critic training process](#training-critic). 
 
 Running the script will finetune a pretrained CodeT5-large model that receives a problem description as input and returns a corresponding solution program in Python. 
 The model checkpoints are saved in a folder under `exps/`. 
