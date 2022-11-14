@@ -5,7 +5,7 @@
 ## CodeRL: Mastering Code Generation through Pretrained Models and Deep Reinforcement Learning <a name="corl"></a>
 
 
-This is the official code for the paper **[CodeRL: Mastering Code Generation through Pretrained Models and Deep Reinforcement Learning](https://arxiv.org/abs/2207.01780)**.  
+This is the official code for the paper **[CodeRL: Mastering Code Generation through Pretrained Models and Deep Reinforcement Learning](https://arxiv.org/abs/2207.01780)** (accepted to [NeurIPS 2022](https://openreview.net/forum?id=WaGvb7OzySA)). Do check out our [blog](https://blog.salesforceairesearch.com/coderl/) and [poster](https://nips.cc/media/PosterPDFs/NeurIPS%202022/d98d76e2b5ba72023414d98e75403e79.png).
 
 Authors:
 [Hung Le](https://sites.google.com/view/henryle2018/home), [Yue Wang](https://yuewang-cuhk.github.io/), [Akhilesh Deepak Gotmare](https://akhileshgotmare.github.io/), [Silvio Savarese](https://scholar.google.com/citations?user=ImpbxLsAAAAJ&hl=en), [Steven C.H. Hoi](https://scholar.google.com/citations?user=JoLjflYAAAAJ&hl=en) 
