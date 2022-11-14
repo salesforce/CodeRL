@@ -238,11 +238,14 @@ The problem is from the APPS benchmark, and the solution programs are generated 
 
 If you find the paper or the source code useful to your projects, please cite the following bibtex: 
 <pre>
-@article{coderl2022,
-  title={CodeRL: Mastering Code Generation through Pretrained Models and Deep Reinforcement Learning},
-  author={Le, Hung and Wang, Yue and Gotmare, Akhilesh Deepak and Savarese, Silvio and Hoi, Steven C. H.},
-  journal={arXiv preprint arXiv:2207.01780},
-  year={2022}
+@inproceedings{
+	le2022coderl,
+	title={Code{RL}: Mastering Code Generation through Pretrained Models and Deep Reinforcement Learning},
+	author={Hung Le and Yue Wang and Akhilesh Deepak Gotmare and Silvio Savarese and Steven Hoi},
+	booktitle={Advances in Neural Information Processing Systems},
+	editor={Alice H. Oh and Alekh Agarwal and Danielle Belgrave and Kyunghyun Cho},
+	year={2022},
+	url={https://openreview.net/forum?id=WaGvb7OzySA}
 }
 </pre>
 
