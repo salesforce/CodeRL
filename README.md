@@ -19,7 +19,7 @@ Authors:
 * [x] [Installation](#installation)
 * [x] [Datasets](#datasets)
 	* [x] [Example Unit Tests](#example-unit-tests)
-* [ ] [Models](#models)
+* [x] [Models](#models)
 	* [x] CodeT5-large
 	* [x] CodeT5-large-ntp-py
 	* [x] CodeRL+CodeT5 
