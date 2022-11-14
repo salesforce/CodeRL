@@ -52,6 +52,9 @@ def eval_and_save_problems(args):
     if args.max_tests!=-1 and nb_tests > args.max_tests: 
         exit() 
 
+    if os.path.isfile(args.output_path + '/{}.pkl'.format(real_index)):
+        exit()
+        
     print("Saving to {}".format(args.output_path + '/{}.pkl'.format(real_index)))
 
     all_results, all_errors, all_sols = [], [], []
@@ -93,7 +96,7 @@ def eval_and_save_problems(args):
     [-2] = compile error, 
     [-1] = runtime error 
     [False] = failed test case 
-    [True] = passed test case")
+    [True] = passed test case
     '''
 
     save_results = {real_index : {'results': all_results, 'errors': all_errors, 'sols': all_sols}} 
