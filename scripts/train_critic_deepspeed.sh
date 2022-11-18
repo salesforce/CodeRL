@@ -11,5 +11,6 @@ USE_TF=NO deepspeed --master_port 62000 \
     --batch-size-per-replica 8 --grad-acc-steps 1 \
     --epochs 10 --lr 2e-5 \
     --save-freq 1000 --log-freq 10 --save_total_limit 5 \
+    --tuning_mode critic --model codet5-base \
     --fp16 --deepspeed configs/deepspeed_configs.json 
     

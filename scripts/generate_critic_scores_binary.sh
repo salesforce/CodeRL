@@ -8,7 +8,7 @@ critic_path=models/codet5_finetuned_critic_binary/
 tokenizer_path=models/codet5_tokenizer/
 test_path=data/APPS/train/ #test.json
 
-output_path=outputs/critic_scores_binary/
+output_path=data/APPS/train/
 
 CUDA_VISIBLE_DEVICES=0 python generate.py \
     --model_path ${critic_path} \

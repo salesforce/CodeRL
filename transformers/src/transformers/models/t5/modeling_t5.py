@@ -19,10 +19,11 @@ import copy
 import math
 import os
 import warnings
+import pdb 
 
 import torch
 from torch import nn
-from torch.nn import CrossEntropyLoss
+from torch.nn import CrossEntropyLoss, LogSoftmax 
 from torch.utils.checkpoint import checkpoint
 
 from ...activations import ACT2FN
@@ -1441,7 +1442,7 @@ class T5ForConditionalGeneration(T5PreTrainedModel):
         r"decoder\.block\.0\.layer\.1\.EncDecAttention\.relative_attention_bias\.weight",
     ]
 
-    def __init__(self, config, tuning_mode=None):
+    def __init__(self, config, tuning_mode=None, clone_rl_head=False):
         super().__init__(config)
         self.model_dim = config.d_model
 
@@ -1462,14 +1463,19 @@ class T5ForConditionalGeneration(T5PreTrainedModel):
         self.lm_head = nn.Linear(config.d_model, config.vocab_size, bias=False)
         
         self.tuning_mode = tuning_mode 
+        self.clone_rl_head = clone_rl_head 
+        
         if self.tuning_mode in ['critic']:
-            
             self.error_head = nn.Sequential(
                   nn.Linear(config.d_model, 128),
                   nn.ReLU(),
                   nn.Linear(128, 4)
             )
-
+            
+        elif self.tuning_mode in ['rl'] and self.clone_rl_head: 
+            # Optional: have a seperate linear layer for RL training (with synthetic samples) 
+            self.rl_head = nn.Linear(config.d_model, config.vocab_size, bias=False)
+                
         # Initialize weights and apply final processing
         self.post_init()
 
@@ -1542,6 +1548,7 @@ class T5ForConditionalGeneration(T5PreTrainedModel):
         output_hidden_states=None,
         return_dict=None,
         error_types=None,
+        rewards=None,
         return_error_hidden_states=False
     ):
         r"""
@@ -1670,6 +1677,22 @@ class T5ForConditionalGeneration(T5PreTrainedModel):
                 return error_pred_loss, error_preds, error_states 
             return error_pred_loss, error_preds
             
+        rl_loss = None
+        if rewards is not None: 
+            if self.clone_rl_head:
+                rl_logits = self.rl_head(sequence_output)
+            else:
+                rl_logits = lm_logits 
+                
+            log_prob_fct = LogSoftmax(dim=-1) 
+            probs = log_prob_fct(rl_logits)[labels!=-100].unsqueeze(0)
+            rl_seqs = labels[labels!=-100].unsqueeze(0)             
+            rl_probs = torch.gather(probs, 2, rl_seqs[:, :, None]).squeeze(-1)
+            rl_rewards = rewards[labels!=-100].unsqueeze(0) 
+            rl_loss = -(rl_probs*rl_rewards).mean() 
+
+            return rl_loss     
+        
         if not return_dict:
             output = (lm_logits,) + decoder_outputs[1:] + encoder_outputs
             return ((loss,) + output) if loss is not None else output

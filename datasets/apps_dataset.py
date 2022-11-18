@@ -25,19 +25,20 @@ import datasets.utils as dsutils
 
 class APPSBaseDataset(torch.utils.data.Dataset):
     def __init__(self, dataroot, problem_dirs, model, max_tokens, sample_mode, 
-                 tuning_mode, max_src_tokens):
+                 tuning_mode, max_src_tokens, relative_returns):
         self.dataroot = dataroot
         self.problem_dirs = problem_dirs 
 
         self.model = model
         self.sample_mode = sample_mode
         self.tuning_mode = tuning_mode
+        self.relative_returns = relative_returns
         
         self.max_tokens = max_tokens
         self.max_src_tokens = max_src_tokens
 
         self.samples = []           
-        self.all_error_types, self.all_error_subtypes = [], [] 
+        self.all_error_types, self.all_error_subtypes, self.all_baseline_error_types = [], [], []
         self.initialize()
 
         if self.model in ['codet5-base', 'codet5-large']:
@@ -58,10 +59,17 @@ class APPSBaseDataset(torch.utils.data.Dataset):
             info.append((result, error_type))
             
         return samples, info 
-     
-    def get_gt_info(self):
-        return (1, None)
     
+    def load_rl_samples(self, sols, baseline_error_type): 
+        samples = []
+        info = []
+        
+        for idx, code in enumerate(sols['code']):   
+            samples.append((sols['prompt'][idx], code))
+            info.append((sols['gt_error_type'][idx], sols['error_hidden_states'][idx], baseline_error_type))
+            
+        return samples, info 
+     
     def load_gt_samples(self, sols, answer_type, starter_code, question_str):
         samples = []
         
@@ -72,12 +80,25 @@ class APPSBaseDataset(torch.utils.data.Dataset):
         
         return samples 
     
+    def get_gt_info(self):
+        return (1, None)
+
+    def get_baseline_error_type(self, sols): 
+        return dsutils.get_error_type(sols[0]['result'])
+    
     def update_error_stat(self, info):
         for i in info:
             error_type = dsutils.get_error_type(i[0])
             error_subtype = i[1]
             self.all_error_types.append(error_type)
             self.all_error_subtypes.append(error_subtype) 
+            
+    def update_error_stat_rl(self, info):
+        for i in info:
+            error_type = i[0]
+            baseline_error_type = i[-1]
+            self.all_error_types.append(error_type)
+            self.all_baseline_error_types.append(baseline_error_type) 
     
     def initialize(self):
         all_samples = []
@@ -92,6 +113,12 @@ class APPSBaseDataset(torch.utils.data.Dataset):
             if self.tuning_mode in ['critic']:                
                 gen_sols_fname = [os.path.join(self.dataroot, problem_name, "gen_solutions.json")]       
 
+            elif self.tuning_mode in ['rl']:
+                gen_sols_fname = [os.path.join(self.dataroot, problem_name, "gen_solutions_critic_scores.pkl")]   
+                
+                if self.relative_returns: 
+                    baseline_fname = os.path.join(self.dataroot, problem_name, "baseline_solutions.json")
+                
             question_fname = os.path.join(self.dataroot, problem_name, "question.txt")
             sols_fname = os.path.join(self.dataroot, problem_name, "solutions.json")            
             if (not os.path.isfile(question_fname)) or (not os.path.isfile(sols_fname)):
@@ -130,27 +157,83 @@ class APPSBaseDataset(torch.utils.data.Dataset):
                 info = [self.get_gt_info() for s in gt_samples]
                 samples_info += info
                 
-                                
+            elif self.tuning_mode in ['rl']: 
+                
+                if self.relative_returns:
+                    baseline_sample = json.load(open(baseline_fname, 'r'))
+                    baseline_error_type = self.get_baseline_error_type(baseline_sample)
+                else:
+                    baseline_error_type = -1 
+
+                for fname in gen_sols_fname: 
+                    if os.path.exists(fname):
+                        gen_sols = pkl.load(open(fname, 'rb'))
+                        samples, info = self.load_rl_samples(gen_sols, baseline_error_type) 
+                        self.update_error_stat_rl(info)
+                        gen_samples += samples
+                        samples_info += info
+                
         print(f"Loaded {len(all_samples)} samples from {self.dataroot}.")
         print(f"Skipped {len(skipped_problems)} problems from {self.dataroot}.")
         
-        if self.tuning_mode in ['critic']:
+        if self.tuning_mode in ['critic', 'rl']:
             if len(gen_samples) != len(samples_info): pdb.set_trace()
             print(f"Loaded {len(gen_samples)} generated samples from {self.dataroot}.")
-            print("Error type distribution: {}".format(Counter(self.all_error_types)))
-            print("Error subtype distribution: {}".format(Counter(self.all_error_subtypes)))
+            print("Error type distribution: {}".format(sorted(Counter(self.all_error_types).items())))
+            if self.tuning_mode == 'critic':
+                print("Error subtype distribution: {}".format(sorted(Counter(self.all_error_subtypes).items())))
+            else:
+                print("Baseline error distribution: {}".format(sorted(Counter(self.all_baseline_error_types).items())))
         else:
             print(f"Loaded {len(all_samples)} samples from {self.dataroot}.")
             
         self.samples = all_samples
         self.samples_info = samples_info 
         self.gen_samples = gen_samples 
-
+        
+        if self.relative_returns: 
+            self.all_error_types = np.array(self.all_error_types)
+            self.all_baseline_error_types = np.array(self.all_baseline_error_types)
+            print('Sampled Error > Baseline error: {}/{}'.format((self.all_error_types>self.all_baseline_error_types).sum(),
+                                                                  len(self.all_error_types)))
+            print('Sampled Error = Baseline error: {}/{}'.format((self.all_error_types==self.all_baseline_error_types).sum(),
+                                                                  len(self.all_error_types)))
+            print('Sampled Error < Baseline error: {}/{}'.format((self.all_error_types<self.all_baseline_error_types).sum(),
+                                                                  len(self.all_error_types)))
+            
+            sample_rewards = np.array([dsutils.get_reward_from_error_type(e) for e in self.all_error_types])
+            baseline_rewards = np.array([dsutils.get_reward_from_error_type(e) for e in self.all_baseline_error_types])
+            print("Relative returns distribution: {}".format(sorted(Counter(sample_rewards-baseline_rewards).items())))
+            
     def __len__(self):
-        if self.tuning_mode in ['critic']:
+        if self.tuning_mode in ['critic', 'rl']:
             return len(self.gen_samples)
         return len(self.samples)
 
+    def __getitem__(self, idx):
+        
+        if self.tuning_mode in ['critic']:
+            raw_samples = self.pack_samples(idx, 'gen')
+            inputs = self.sample_task(raw_samples, 'gen')
+         
+        elif self.tuning_mode in ['rl']:
+            gt_sample_idx = random.randint(0, len(self.samples)-1)
+            raw_gt_samples = self.pack_samples(gt_sample_idx)
+            inputs = self.sample_task(raw_gt_samples)
+            
+            item = self.gen_samples[idx]
+            info = self.samples_info[idx]
+
+            gen_inputs = self.sample_rl_task(item, info)
+            for k,v in gen_inputs.items():
+                inputs['rl_{}'.format(k)] = v 
+            
+        else:
+            raw_samples = self.pack_samples(idx)
+            inputs = self.sample_task(raw_samples)
+
+        gc.collect()
+        return inputs
 
     def pack_samples(self, idx, sample_type=None):
         """
@@ -207,18 +290,6 @@ class APPSBaseDataset(torch.utils.data.Dataset):
 
         return curr_samples
 
-    def __getitem__(self, idx):
-        
-        if self.tuning_mode in ['critic']:
-            raw_samples = self.pack_samples(idx, 'gen')
-            inputs = self.sample_task(raw_samples, 'gen')
-         
-        else:
-            raw_samples = self.pack_samples(idx)
-            inputs = self.sample_task(raw_samples)
-
-        gc.collect()
-        return inputs
     
     def sample_task(self, samples, sample_type=None):
 
@@ -285,3 +356,53 @@ class APPSBaseDataset(torch.utils.data.Dataset):
             
         return out_sample 
 
+    def sample_rl_task(self, item, info):
+        input_ids, labels = item
+        gt_error, error_logit, baseline_error = info 
+        
+        softmax_fn = torch.nn.Softmax(dim=-1)
+        rewards = softmax_fn(torch.tensor(error_logit))[:,gt_error]
+        
+        if self.relative_returns: 
+            curr_reward = dsutils.get_reward_from_error_type(gt_error)
+            baseline_reward = dsutils.get_reward_from_error_type(baseline_error) if baseline_error!=-1 else 0 
+            relative_reward = curr_reward - baseline_reward
+            rewards *= relative_reward
+        else:
+            rewards *= dsutils.get_reward_from_error_type(gt_error)
+        
+        # masking rewards 
+        reward_mask = (error_logit == -np.float('Inf'))[:,0]
+        rewards[reward_mask] = 0.0
+        rl_label_ids = np.array(labels)
+        rl_label_ids[reward_mask] = -100 
+
+        assert len(labels) == len(rewards)
+            
+        if len(input_ids) < self.max_src_tokens:
+            new_input_ids = [self.tokenizer.eos_token_id] * self.max_src_tokens
+            new_input_ids[:len(input_ids)] = input_ids
+            input_ids = new_input_ids
+            
+        if len(rl_label_ids) < self.max_tokens: 
+            new_rl_label_ids = np.array([-100] * self.max_tokens)
+            new_rl_label_ids[:len(rl_label_ids)] = rl_label_ids
+            rl_label_ids = new_rl_label_ids
+            
+            new_rewards = torch.zeros(self.max_tokens)
+            new_rewards[:len(rewards)] = rewards 
+            rewards = new_rewards 
+        
+        input_ids = input_ids[:self.max_src_tokens]
+        rewards = rewards[:self.max_tokens]
+        rl_label_ids = rl_label_ids[:self.max_tokens]
+        
+        out_sample = {
+            "input_ids" : torch.LongTensor(input_ids),
+            "rewards": rewards,
+            'label_ids': torch.LongTensor(rl_label_ids)
+        }
+        
+        return out_sample 
+    
+    

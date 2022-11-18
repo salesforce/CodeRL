@@ -1,0 +1,1 @@
+{"fn_name": "is_prime", "inputs": [[1], [2], [5], [143], [-1], [29], [53], [529]], "outputs": [[false], [true], [true], [false], [false], [true], [true], [false]]}

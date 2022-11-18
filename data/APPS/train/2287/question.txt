@@ -1,0 +1,59 @@
+We have a tree with N vertices. The vertices are numbered 1, 2, ..., N. The i-th (1 ≦ i ≦ N - 1) edge connects the two vertices A_i and B_i.
+Takahashi wrote integers into K of the vertices. Specifically, for each 1 ≦ j ≦ K, he wrote the integer P_j into vertex V_j. The remaining vertices are left empty. After that, he got tired and fell asleep.
+Then, Aoki appeared. He is trying to surprise Takahashi by writing integers into all empty vertices so that the following condition is satisfied:
+ - Condition: For any two vertices directly connected by an edge, the integers written into these vertices differ by exactly 1.
+Determine if it is possible to write integers into all empty vertices so that the condition is satisfied. If the answer is positive, find one specific way to satisfy the condition.
+
+-----Constraints-----
+ - 1 ≦ N ≦ 10^5
+ - 1 ≦ K ≦ N
+ - 1 ≦ A_i, B_i ≦ N (1 ≦ i ≦ N - 1)
+ - 1 ≦ V_j ≦ N (1 ≦ j ≦ K) (21:18, a mistake in this constraint was corrected)
+ - 0 ≦ P_j ≦ 10^5 (1 ≦ j ≦ K)
+ - The given graph is a tree.
+ - All v_j are distinct.
+
+-----Input-----
+The input is given from Standard Input in the following format:
+N
+A_1 B_1
+A_2 B_2
+:
+A_{N-1} B_{N-1}
+K
+V_1 P_1
+V_2 P_2
+:
+V_K P_K
+
+-----Output-----
+If it is possible to write integers into all empty vertices so that the condition is satisfied, print Yes. Otherwise, print No.
+If it is possible to satisfy the condition, print N lines in addition. The v-th (1 ≦ v ≦ N) of these N lines should contain the integer that should be written into vertex v. If there are multiple ways to satisfy the condition, any of those is accepted.
+
+-----Sample Input-----
+5
+1 2
+3 1
+4 3
+3 5
+2
+2 6
+5 7
+
+-----Sample Output-----
+Yes
+5
+6
+6
+5
+7
+
+The figure below shows the tree when Takahashi fell asleep. For each vertex, the integer written beside it represents the index of the vertex, and the integer written into the vertex is the integer written by Takahashi.
+Aoki can, for example, satisfy the condition by writing integers into the remaining vertices as follows:
+This corresponds to Sample Output 1. Note that other outputs that satisfy the condition will also be accepted, such as:
+Yes
+7
+6
+8
+7
+7

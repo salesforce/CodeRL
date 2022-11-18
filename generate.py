@@ -168,12 +168,16 @@ def main(args):
                 all_preds.extend(error_preds.cpu().numpy().tolist())
                 all_gts.extend(gt_error_types)
                 
-                saved_critic_scores = {}
-                saved_critic_scores[problem_id] = {'code': input_codes, 'prompt': input_texts,
+                saved_critic_scores = {'code': input_codes, 'prompt': input_texts,
                                           'gt_error_type': gt_error_types, 
                                           'pred_error_type': error_preds.cpu().numpy(),
                                           'error_hidden_states': error_hidden_states.cpu().numpy()}
-                scores_loc = os.path.join(args.output_path,  f"{problem_id}_gt{args.gt_solutions}.pkl")
+                
+                if args.gt_solutions:
+                    scores_loc = os.path.join(prob_path,  "solutions_critic_scores.pkl")
+                else:
+                    scores_loc = os.path.join(prob_path,  "gen_solutions_critic_scores.pkl")
+                    
                 pkl.dump(saved_critic_scores, open(scores_loc, 'wb'))
                     
             else:

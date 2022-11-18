@@ -49,26 +49,36 @@ def get_error_type(result, binary=False):
     if binary:
         if result == True:
             return 1
-        
         else:
             return 0
         
     # Compile error 
     if result == -2:
         return 0
-    
     # Runtime error
     elif result == -1:
         return 1
-    
     # Failed unit tests 
     elif result == False: 
         return 2 
-    
     # Passed all unit tests 
     elif result == True: 
         return 3 
-    
     else:
         raise NotImplementedError()
             
+def get_reward_from_error_type(error_type):
+    if error_type == 0:
+        # Compile error
+        return -1
+    elif error_type == 1:
+        # Runtime error
+        return -0.6
+    elif error_type == 2:
+        # Failed unit tests
+        return -0.3
+    elif error_type == 3:
+        # Passed all unit tests
+        return 1 
+    else:
+        raise NotImplementedError()

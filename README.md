@@ -31,7 +31,7 @@ Authors:
 	* [x] [Training Critic](#training-critic)
 	* [x] [Generating Critic Scores](#generating-critic-scores)
 	* [x] [Finetuning with Ground-truth Programs](#finetuning-with-ground-truth-programs)
-	* [ ] [Finetuning with Generated Programs](#finetuning-with-generated-programs)
+	* [x] [Finetuning with Generated Programs](#finetuning-with-generated-programs)
 	* [ ] [Generating Programs with Critic Sampling](#generating-programs-with-critic-sampling)
 * [x] [Example Generated Programs](#example-generated-programs)
 * [x] [Citation](#citation)
@@ -208,7 +208,8 @@ We created `scripts/generate_critic_scores.sh` to generate critic scores for syn
 
 Other parameters are defined in the file `utils/generate_configs.py`.
 
-Running the generation script will output programs, each of which is saved into a `pkl` (pickle) file, including data fields `code` (list of programs), `prompt` (constructed input sequence to the critic model), `gt_error_type` (ground-truth test outcomes), `pred_error_type` (predicted test outcomes by critic), `error_hidden_states` (hidden states returned by critic). 
+Running the generation script will output predictions of the critic model.
+For each data sample, the prediction is saved into a `pkl` (pickle) file, including data fields `code` (list of programs), `prompt` (constructed input sequence to the critic model), `gt_error_type` (ground-truth test outcomes), `pred_error_type` (predicted test outcomes by critic), `error_hidden_states` (hidden states returned by critic). 
 
 ### Finetuning with Ground-truth Programs
 
@@ -221,7 +222,19 @@ The model checkpoints are saved in a folder under `exps/`.
 
 ### Finetuning with Generated Programs
 
-TBD
+We created `scripts/train_actor_rl.sh` and `scripts/train_actor_rl_deepspeed.sh` to train pretrained LMs with synthetic generated programs. 
+We use the parameters as defined above in the [critic training process](#training-critic) with the following additional parameters: 
+
+|   **Parameters**  |                                              **Description**                                             |       **Example Values**       |
+|:-----------------:|:--------------------------------------------------------------------------------------------------------:|:------------------------------:|
+| `model_path`        | Path to a finetuned model checkpoint e.g. from warm-up training                                                                    | models/codet5_finetuned_codeRL |
+| `relative_returns`    | Enable this to consider a baseline to compute relative return estimates rather than absolute return restimates in the RL loss| N/A      |
+
+Other parameters are defined in the file `utils/train_configs.py`.
+
+
+Running the script will load a finetuned CodeT5-large model and continue to train it with both generated programs as well as ground-truth programs in alternative training steps. 
+The model checkpoints are saved in a folder under `exps/`. 
 
 ### Generating Programs with Critic Sampling 
 

@@ -5,12 +5,16 @@
 # For full license text, see the LICENSE file in the repo root or https://opensource.org/licenses/BSD-3-Clause
 #
 
-# Run code in debugging mode (without deepspeed) 
-python \
+# Run code with deepspeed 
+USE_TF=NO deepspeed --master_port 62000 \
     train.py \
-    --batch-size-per-replica 8 --grad-acc-steps 1 \
+    --batch-size-per-replica 1 --grad-acc-steps 4 \
     --epochs 10 --lr 2e-5 \
     --save-freq 1000 --log-freq 10 --save_total_limit 5 \
-    --tuning_mode critic --model codet5-base \
-    --fp16 --db 
+    --fp16 \
+    --tuning_mode rl --model codet5-large \
+    --model_path models/codet5_finetuned_codeRL \
+    --relative_returns  \
+    --deepspeed configs/deepspeed_configs.json 
+
     

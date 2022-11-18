@@ -1,0 +1,1 @@
+{"inputs": ["5\n1 2\n3 1\n4 3\n3 5\n2\n2 6\n5 7\n", "5\n1 2\n3 1\n4 3\n3 5\n3\n2 6\n4 3\n5 7\n", "4\n1 2\n2 3\n3 4\n1\n1 0\n"], "outputs": ["Yes\n5\n6\n6\n5\n7\n", "No\n", "Yes\n0\n-1\n-2\n-3\n"]}

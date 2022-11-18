@@ -186,7 +186,7 @@ SCHEDULER_NAME = "scheduler.pt"
 SCALER_NAME = "scaler.pt"
 
 
-class Trainer_Critic:
+class Trainer_RL:
     """
     Trainer is a simple but feature-complete training and eval loop for PyTorch, optimized for 🤗 Transformers.
 
@@ -1921,7 +1921,7 @@ class Trainer_Critic:
         with self.autocast_smart_context_manager():
             if self.tuning_mode in ['critic']: 
                 loss, acc = self.compute_loss(model, inputs, step)
-            else:
+            elif self.tuning_mode in ['rl']: 
                 loss, rl_loss = self.compute_loss(model, inputs, step)
                     
         if self.args.n_gpu > 1:
@@ -1967,6 +1967,16 @@ class Trainer_Critic:
             error_pred_loss, error_preds = model(**curr_inputs)
             error_pred_acc = (inputs['error_types'].squeeze(1) == error_preds).sum()/len(inputs['error_types'])
         
+        elif self.tuning_mode in ['rl']:
+            outputs = None
+            rl_loss = torch.tensor(0.0) 
+            if step % 2 == 0:
+                curr_inputs = {'input_ids': inputs['input_ids'], 'labels': inputs['labels']}
+                outputs = model(**curr_inputs)
+            else:
+                curr_inputs = {'input_ids': inputs['rl_input_ids'], 'rewards': inputs['rl_rewards'], 'labels': inputs['rl_label_ids']}
+                rl_loss = model(**curr_inputs)
+                    
         if outputs is not None: 
             # Save past state if it exists
             # TODO: this needs to be fixed and made cleaner later.
@@ -1983,6 +1993,9 @@ class Trainer_Critic:
         
         if self.tuning_mode in ['critic']:
             return error_pred_loss, error_pred_acc
+        
+        elif self.tuning_mode in ['rl']:
+            return loss, rl_loss 
     
     
     def is_local_process_zero(self) -> bool:
