@@ -138,7 +138,7 @@ We created `scripts/generate.sh` to generate programs on the APPS benchmark. You
 | `temp`              | temperature for sampling generation                                                                      | 0.6                            |
 | `output_path`              | Path to save generated programs                                                                      | outputs/codes/                            |
 
-Other parameters are defined in the file `utils/generate_configs.py`.
+Other parameters are defined in the file `configs/generate_configs.py`.
 
 Running the generation script will output programs, each of which is saved into a `json` file, including data fields `code` (list of output programs) and `prompt` (constructed input sequence to the LM model).
 
@@ -192,7 +192,7 @@ We created `scripts/train_critic.sh` and `scripts/train_critic_deepspeed.sh` to 
 | `deepspeed`        | If using deepspeed, set this parameter to the configuration file for deepspeed training  | configs/deepspeed_configs.json                                                  |
 | `db`        | Enable this to train in debugging mode i.e. with small dummy data split and only 1 data worker  | N/A                                                  |
 
-Other parameters are defined in the file `utils/train_configs.py`.
+Other parameters are defined in the file `configs/train_configs.py`.
 
 Running the script will train a critic model as a classifier that receives inputs as a problem description + a generated program and returns an output as one of 4 test outcomes: compile error, runtime error, failed tests, and passed tests. The model checkpoints are saved in a folder under `exps/`. 
 
@@ -206,7 +206,7 @@ We created `scripts/generate_critic_scores.sh` to generate critic scores for syn
 | `gt_solutions`    | Enable this to run inference on ground-truth programs; else, synthetic programs are used by default                                  | N/A      |
 | `binary_prediction`    | Enable this to predict in binary classification i.e. passed tests or failed tests only                                  | N/A      |
 
-Other parameters are defined in the file `utils/generate_configs.py`.
+Other parameters are defined in the file `configs/generate_configs.py`.
 
 Running the generation script will output predictions of the critic model.
 For each data sample, the prediction is saved into a `pkl` (pickle) file, including data fields `code` (list of programs), `prompt` (constructed input sequence to the critic model), `gt_error_type` (ground-truth test outcomes), `pred_error_type` (predicted test outcomes by critic), `error_hidden_states` (hidden states returned by critic). 
@@ -230,7 +230,7 @@ We use the parameters as defined above in the [critic training process](#trainin
 | `model_path`        | Path to a finetuned model checkpoint e.g. from warm-up training                                                                    | models/codet5_finetuned_codeRL |
 | `relative_returns`    | Enable this to consider a baseline to compute relative return estimates rather than absolute return restimates in the RL loss| N/A      |
 
-Other parameters are defined in the file `utils/train_configs.py`.
+Other parameters are defined in the file `configs/train_configs.py`.
 
 
 Running the script will load a finetuned CodeT5-large model and continue to train it with both generated programs as well as ground-truth programs in alternative training steps. 
